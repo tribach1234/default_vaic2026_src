@@ -22,6 +22,7 @@ from werkzeug.exceptions import RequestEntityTooLarge
 from werkzeug.middleware.proxy_fix import ProxyFix
 
 from config import Config
+from calendar_api import register_calendar_routes
 
 logging.basicConfig(
     level=logging.INFO,
@@ -44,6 +45,10 @@ CORS(
         }
     },
 )
+
+# Đăng ký API đặt lịch demo:
+# POST /api/calendar/schedule
+register_calendar_routes(app)
 
 UPLOAD_DIR = Config.BASE_DIR / "uploads"
 UPLOAD_DIR.mkdir(parents=True, exist_ok=True)
@@ -157,6 +162,7 @@ def root():
             "service": "Deal Connect API",
             "status": "online",
             "health": "/api/health",
+            "calendar_schedule": "/api/calendar/schedule",
         }
     )
 
@@ -170,6 +176,7 @@ def health():
             "allowed_origins": Config.ALLOWED_ORIGINS,
             "active_jobs": active_job_count(),
             "max_active_jobs": Config.MAX_QUEUED_JOBS,
+            "calendar_scheduling": True,
         }
     )
 

@@ -94,10 +94,16 @@
 
       <nav class="flex-1 px-4 py-6">
         <p class="px-3 text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500" data-i18n="workspace">Không gian làm việc</p>
-        <a href="#" class="mt-3 flex items-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3.5 text-sm font-semibold text-white shadow-lg shadow-blue-950/30">
-          <span class="flex h-9 w-9 items-center justify-center rounded-lg bg-white/15"><i class="fa-regular fa-file-lines"></i></span>
+
+        <button type="button" id="nav-workspace" onclick="showPage('workspace')" class="mt-3 flex w-full items-center gap-3 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-4 py-3.5 text-left text-sm font-semibold text-white shadow-lg shadow-blue-950/30 transition">
+          <span class="nav-icon flex h-9 w-9 items-center justify-center rounded-lg bg-white/15"><i class="fa-regular fa-file-lines"></i></span>
           <span data-i18n="navDocumentIntelligence">Phân tích hồ sơ</span>
-        </a>
+        </button>
+
+        <button type="button" id="nav-about" onclick="showPage('about')" class="mt-2 flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left text-sm font-semibold text-slate-300 transition hover:bg-white/[.06] hover:text-white">
+          <span class="nav-icon flex h-9 w-9 items-center justify-center rounded-lg bg-white/[.06] text-slate-400"><i class="fa-solid fa-users"></i></span>
+          <span data-i18n="navAboutUs">Về chúng tôi</span>
+        </button>
       </nav>
 
       <div class="m-4 rounded-2xl border border-white/10 bg-white/[.04] p-4">
@@ -125,9 +131,9 @@
               <div class="flex items-center gap-2 text-xs font-semibold text-slate-500 dark:text-slate-400">
                 <span data-i18n="workspace">Không gian làm việc</span>
                 <i class="fa-solid fa-chevron-right text-[8px]"></i>
-                <span class="text-blue-600 dark:text-blue-400" data-i18n="navDocumentIntelligence">Phân tích hồ sơ</span>
+                <span id="header-section-label" class="text-blue-600 dark:text-blue-400">Phân tích hồ sơ</span>
               </div>
-              <h1 class="mt-1 truncate text-lg font-bold tracking-tight text-slate-950 sm:text-xl dark:text-white" data-i18n="pageTitle">Nền tảng phân tích hồ sơ đầu tư</h1>
+              <h1 id="header-page-title" class="mt-1 truncate text-lg font-bold tracking-tight text-slate-950 sm:text-xl dark:text-white">Nền tảng phân tích hồ sơ đầu tư</h1>
             </div>
           </div>
 
@@ -157,7 +163,7 @@
         </div>
       </header>
 
-      <div class="mx-auto max-w-[1440px] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
+      <div id="workspace-page" class="mx-auto max-w-[1440px] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
         <section class="relative overflow-hidden rounded-3xl border border-blue-200/60 bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-950 px-6 py-8 text-white shadow-soft sm:px-8 lg:px-10 lg:py-10 dark:border-blue-900/50">
           <div class="absolute -right-16 -top-24 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl"></div>
           <div class="absolute -bottom-32 left-1/3 h-72 w-72 rounded-full bg-indigo-500/20 blur-3xl"></div>
@@ -262,7 +268,212 @@
           </aside>
         </div>
       </div>
+
+      <!-- ABOUT US PAGE -->
+      <div id="about-page" class="hidden mx-auto max-w-[1440px] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
+        <section class="relative overflow-hidden rounded-3xl border border-indigo-200/60 bg-gradient-to-br from-slate-950 via-indigo-950 to-blue-950 px-6 py-9 text-white shadow-soft sm:px-8 lg:px-10 lg:py-12 dark:border-indigo-900/50">
+          <div class="absolute -right-16 -top-24 h-72 w-72 rounded-full bg-violet-500/20 blur-3xl"></div>
+          <div class="absolute -bottom-28 left-1/3 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl"></div>
+
+          <div class="relative max-w-3xl">
+            <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold text-indigo-100">
+              <i class="fa-solid fa-people-group text-cyan-300"></i>
+              <span data-i18n="aboutEyebrow">Đội ngũ phát triển Deal Connect</span>
+            </span>
+            <h2 class="mt-5 text-3xl font-extrabold leading-tight tracking-[-.03em] sm:text-4xl lg:text-[42px]" data-i18n="aboutHeroTitle">Một đội ngũ, một quy trình kết nối vốn liền mạch</h2>
+            <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base" data-i18n="aboutHeroDescription">Năm thành viên phối hợp từ phân tích tài liệu, kiến trúc hệ thống đến xây dựng trải nghiệm gọi vốn và kết nối nhà đầu tư.</p>
+          </div>
+        </section>
+
+        <section class="mt-8">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[.18em] text-blue-600 dark:text-blue-400" data-i18n="teamEyebrow">Thành viên đội</p>
+              <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-950 dark:text-white" data-i18n="teamTitle">Những người xây dựng sản phẩm</h2>
+            </div>
+            <span class="inline-flex w-fit items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-bold text-slate-600 shadow-sm dark:border-slate-800 dark:bg-slate-900 dark:text-slate-300">
+              <i class="fa-solid fa-circle-check text-emerald-500"></i>
+              <span data-i18n="teamComplete">Đội ngũ gồm 5 thành viên</span>
+            </span>
+          </div>
+
+          <div class="mt-6 grid gap-5 md:grid-cols-2 xl:grid-cols-3">
+            <article class="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/80">
+              <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-[70px] bg-fuchsia-500/[.08]"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-violet-600 text-lg font-extrabold text-white shadow-lg shadow-fuchsia-500/20">K</div>
+                  <span class="rounded-full bg-fuchsia-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-fuchsia-700 dark:bg-fuchsia-500/10 dark:text-fuchsia-300" data-i18n="rolePresentationTag">Pitch & Presentation</span>
+                </div>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Khanh</h3>
+                <p class="mt-1 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400" data-i18n="khanhRole">Pitch Deck & Thuyết trình</p>
+                <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="khanhDescription">Xây dựng câu chuyện sản phẩm, hoàn thiện pitch deck và đại diện đội trình bày giải pháp.</p>
+              </div>
+            </article>
+
+            <article class="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/80">
+              <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-[70px] bg-blue-500/[.08]"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-lg font-extrabold text-white shadow-lg shadow-blue-500/20">B</div>
+                  <span class="rounded-full bg-blue-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-blue-700 dark:bg-blue-500/10 dark:text-blue-300" data-i18n="roleArchitectureTag">Architecture</span>
+                </div>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Bách</h3>
+                <p class="mt-1 text-sm font-semibold text-blue-600 dark:text-blue-400" data-i18n="bachRole">Frontend & Kiến trúc hệ thống</p>
+                <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="bachDescription">Thiết kế trải nghiệm người dùng, xây dựng frontend và định hình kiến trúc tổng thể của hệ thống.</p>
+              </div>
+            </article>
+
+            <article class="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/80">
+              <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-[70px] bg-orange-500/[.08]"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-rose-500 text-lg font-extrabold text-white shadow-lg shadow-orange-500/20">D</div>
+                  <span class="rounded-full bg-orange-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-orange-700 dark:bg-orange-500/10 dark:text-orange-300" data-i18n="roleRetrievalTag">Data Retrieval</span>
+                </div>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Dũng</h3>
+                <p class="mt-1 text-sm font-semibold text-orange-600 dark:text-orange-400" data-i18n="dungRole">PDF Parser & Truy xuất dữ liệu</p>
+                <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="dungDescription">Phụ trách bóc tách nội dung PDF, chuẩn hóa dữ liệu và xây dựng luồng truy xuất thông tin.</p>
+              </div>
+            </article>
+
+            <article class="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/80">
+              <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-[70px] bg-emerald-500/[.08]"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-lg font-extrabold text-white shadow-lg shadow-emerald-500/20">HM</div>
+                  <span class="rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300" data-i18n="roleMatchingTag">Matching & Deploy</span>
+                </div>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Hiển Minh</h3>
+                <p class="mt-1 text-sm font-semibold text-emerald-600 dark:text-emerald-400" data-i18n="minhRole">Semantic Matching & Triển khai</p>
+                <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="minhDescription">Phát triển thuật toán semantic matching, tối ưu xếp hạng nhà đầu tư và triển khai hệ thống.</p>
+              </div>
+            </article>
+
+            <article class="group relative overflow-hidden rounded-3xl border border-slate-200/80 bg-white p-6 shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/80 md:col-span-2 xl:col-span-1">
+              <div class="absolute right-0 top-0 h-24 w-24 rounded-bl-[70px] bg-cyan-500/[.08]"></div>
+              <div class="relative">
+                <div class="flex items-start justify-between gap-4">
+                  <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-lg font-extrabold text-white shadow-lg shadow-cyan-500/20">Q</div>
+                  <span class="rounded-full bg-cyan-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-cyan-700 dark:bg-cyan-500/10 dark:text-cyan-300" data-i18n="roleOutreachTag">Outreach Automation</span>
+                </div>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Quân</h3>
+                <p class="mt-1 text-sm font-semibold text-cyan-600 dark:text-cyan-400" data-i18n="quanRole">Đặt lịch & Sinh email</p>
+                <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="quanDescription">Xây dựng chức năng đặt lịch với nhà đầu tư và tự động tạo email tiếp cận phù hợp.</p>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section class="mt-8 overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
+          <div class="grid lg:grid-cols-[.9fr_1.1fr]">
+            <div class="bg-gradient-to-br from-blue-600 to-indigo-700 p-7 text-white sm:p-8">
+              <span class="flex h-12 w-12 items-center justify-center rounded-2xl bg-white/15 text-xl"><i class="fa-solid fa-diagram-project"></i></span>
+              <h3 class="mt-5 text-2xl font-extrabold" data-i18n="collaborationTitle">Phối hợp theo một chuỗi giá trị</h3>
+              <p class="mt-3 text-sm leading-7 text-blue-100" data-i18n="collaborationDescription">Mỗi thành viên sở hữu một mô-đun trọng yếu nhưng cùng hướng tới một trải nghiệm thống nhất cho Founder.</p>
+            </div>
+            <div class="grid gap-4 p-6 sm:grid-cols-2 sm:p-8">
+              <div class="rounded-2xl border border-slate-200 p-4 dark:border-slate-700">
+                <div class="text-xs font-extrabold uppercase tracking-[.14em] text-blue-600 dark:text-blue-400">01</div>
+                <div class="mt-2 text-sm font-bold text-slate-950 dark:text-white" data-i18n="flowUnderstand">Hiểu hồ sơ</div>
+                <p class="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400" data-i18n="flowUnderstandText">PDF parser và retrieval tạo nền dữ liệu đáng tin cậy.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4 dark:border-slate-700">
+                <div class="text-xs font-extrabold uppercase tracking-[.14em] text-indigo-600 dark:text-indigo-400">02</div>
+                <div class="mt-2 text-sm font-bold text-slate-950 dark:text-white" data-i18n="flowConnect">Tìm kết nối</div>
+                <p class="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400" data-i18n="flowConnectText">Semantic matching xác định và xếp hạng nhà đầu tư phù hợp.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4 dark:border-slate-700">
+                <div class="text-xs font-extrabold uppercase tracking-[.14em] text-violet-600 dark:text-violet-400">03</div>
+                <div class="mt-2 text-sm font-bold text-slate-950 dark:text-white" data-i18n="flowEngage">Chủ động tiếp cận</div>
+                <p class="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400" data-i18n="flowEngageText">Email generation và calendar scheduling biến kết quả thành hành động.</p>
+              </div>
+              <div class="rounded-2xl border border-slate-200 p-4 dark:border-slate-700">
+                <div class="text-xs font-extrabold uppercase tracking-[.14em] text-cyan-600 dark:text-cyan-400">04</div>
+                <div class="mt-2 text-sm font-bold text-slate-950 dark:text-white" data-i18n="flowPresent">Truyền tải giá trị</div>
+                <p class="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400" data-i18n="flowPresentText">Frontend và pitch deck hoàn thiện trải nghiệm sản phẩm và câu chuyện dự án.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </main>
+  </div>
+
+
+  <!-- SCHEDULING MODAL -->
+  <div id="schedule-modal" class="fixed inset-0 z-50 hidden items-center justify-center bg-slate-950/70 p-4 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="schedule-modal-title">
+    <div class="max-h-[92vh] w-full max-w-3xl overflow-y-auto rounded-3xl border border-slate-200 bg-white shadow-2xl dark:border-slate-700 dark:bg-slate-900">
+      <div class="sticky top-0 z-10 flex items-start justify-between gap-4 border-b border-slate-200 bg-white/95 px-6 py-5 backdrop-blur dark:border-slate-800 dark:bg-slate-900/95">
+        <div>
+          <p class="text-xs font-extrabold uppercase tracking-[.16em] text-blue-600 dark:text-blue-400" data-i18n="scheduleEyebrow">Lịch hẹn demo</p>
+          <h2 id="schedule-modal-title" class="mt-1 text-xl font-extrabold text-slate-950 dark:text-white" data-i18n="scheduleTitle">Đặt lịch với nhà đầu tư</h2>
+          <p id="schedule-investor-name" class="mt-1 text-sm text-slate-500 dark:text-slate-400"></p>
+        </div>
+        <button type="button" onclick="closeScheduleModal()" class="flex h-10 w-10 shrink-0 items-center justify-center rounded-xl border border-slate-200 text-slate-500 transition hover:border-rose-300 hover:bg-rose-50 hover:text-rose-600 dark:border-slate-700 dark:hover:border-rose-800 dark:hover:bg-rose-500/10" aria-label="Close">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+
+      <div class="p-6">
+        <div id="schedule-loading" class="flex flex-col items-center justify-center py-12 text-center">
+          <div class="h-12 w-12 animate-spin rounded-full border-4 border-blue-100 border-t-blue-600 dark:border-slate-800 dark:border-t-blue-400"></div>
+          <h3 class="mt-4 text-base font-bold text-slate-950 dark:text-white" data-i18n="scheduleLoading">Đang tìm thời gian phù hợp...</h3>
+          <p class="mt-2 text-sm text-slate-500 dark:text-slate-400" data-i18n="scheduleLoadingDescription">Hệ thống đang đối chiếu lịch mock của hai bên để tìm các khoảng thời gian rảnh chung.</p>
+        </div>
+
+        <div id="schedule-result" class="hidden space-y-5">
+          <div class="rounded-2xl border border-blue-200 bg-blue-50 p-5 dark:border-blue-900/70 dark:bg-blue-500/[.08]">
+            <div class="flex items-start gap-4">
+              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-600 text-white shadow-lg shadow-blue-500/20">
+                <i class="fa-regular fa-calendar"></i>
+              </span>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-[.14em] text-blue-700 dark:text-blue-300" data-i18n="availableSchedule">Các khung giờ phù hợp</p>
+                <h3 id="schedule-slot-count" class="mt-1 text-lg font-extrabold text-slate-950 dark:text-white"></h3>
+                <p class="mt-1 text-xs text-slate-500 dark:text-slate-400" data-i18n="scheduleNotice">Chọn một khung giờ phù hợp, sau đó bấm xác nhận lịch.</p>
+              </div>
+            </div>
+          </div>
+
+          <div id="schedule-slot-list" class="grid gap-3 sm:grid-cols-2"></div>
+
+          <div id="schedule-empty" class="hidden rounded-2xl border border-amber-200 bg-amber-50 p-5 text-sm font-semibold text-amber-800 dark:border-amber-900/70 dark:bg-amber-500/[.08] dark:text-amber-200" data-i18n="noAvailableSchedule">
+            Không tìm thấy khoảng thời gian rảnh chung phù hợp.
+          </div>
+
+          <div id="schedule-selection-hint" class="rounded-2xl border border-slate-200 bg-slate-50 p-4 text-sm font-semibold text-slate-600 dark:border-slate-700 dark:bg-slate-950/50 dark:text-slate-300">
+            <i class="fa-regular fa-hand-pointer mr-2 text-blue-600 dark:text-blue-400"></i>
+            <span data-i18n="chooseSlotHint">Vui lòng chọn một khung giờ trước khi xác nhận.</span>
+          </div>
+
+          <div id="schedule-confirmed" class="hidden rounded-2xl border border-emerald-200 bg-emerald-50 p-5 dark:border-emerald-900/70 dark:bg-emerald-500/[.08]">
+            <div class="flex items-start gap-4">
+              <span class="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-emerald-600 text-white">
+                <i class="fa-solid fa-calendar-check"></i>
+              </span>
+              <div>
+                <p class="text-xs font-extrabold uppercase tracking-[.14em] text-emerald-700 dark:text-emerald-300" data-i18n="scheduleConfirmedTitle">Lịch đã được xác nhận</p>
+                <h3 id="confirmed-slot-label" class="mt-1 text-lg font-extrabold text-slate-950 dark:text-white"></h3>
+                <p class="mt-1 text-sm text-slate-600 dark:text-slate-300" data-i18n="scheduleConfirmedDescription">Startup đã chọn khung giờ này để gặp nhà đầu tư.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex flex-col-reverse gap-3 sm:flex-row sm:justify-end">
+            <button type="button" onclick="closeScheduleModal()" class="rounded-xl border border-slate-200 px-5 py-3 text-sm font-bold text-slate-600 transition hover:bg-slate-50 dark:border-slate-700 dark:text-slate-300 dark:hover:bg-slate-800" data-i18n="closeSchedule">
+              Đóng
+            </button>
+            <button id="confirm-schedule-button" type="button" onclick="confirmSelectedSchedule()" disabled class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-600 to-indigo-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-blue-500/20 transition hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-40 disabled:hover:translate-y-0">
+              <i class="fa-solid fa-check"></i>
+              <span data-i18n="confirmSchedule">Xác nhận lịch</span>
+            </button>
+          </div>
+        </div>
+
+        <div id="schedule-error" class="hidden rounded-2xl border border-rose-200 bg-rose-50 p-5 text-sm font-semibold leading-6 text-rose-700 dark:border-rose-900/70 dark:bg-rose-500/[.08] dark:text-rose-200"></div>
+      </div>
+    </div>
   </div>
 
   <script>
@@ -270,21 +481,35 @@
     const DEMO_API_KEY = String(window.APP_CONFIG?.DEMO_API_KEY || '');
     let selectedFile = null;
     let currentLanguage = localStorage.getItem('dealconnect-language') || 'vi';
+    let currentPage = 'workspace';
+    let latestMatches = [];
+    let schedulingInvestor = null;
+    let availableScheduleSlots = [];
+    let selectedScheduleSlot = null;
+    let confirmedSchedule = null;
 
     const translations = {
       vi: {
-        brandSubtitle:'Không gian kết nối vốn', workspace:'Không gian làm việc', navDocumentIntelligence:'Phân tích hồ sơ', localProcessing:'Xử lý cục bộ đã bật', privacyNote:'Tài liệu được xử lý thông qua kết nối backend riêng của bạn.', pageTitle:'Nền tảng phân tích hồ sơ đầu tư',
+        brandSubtitle:'Không gian kết nối vốn', workspace:'Không gian làm việc', navDocumentIntelligence:'Phân tích hồ sơ', navAboutUs:'Về chúng tôi', localProcessing:'Xử lý cục bộ đã bật', privacyNote:'Tài liệu được xử lý thông qua kết nối backend riêng của bạn.', pageTitle:'Nền tảng phân tích hồ sơ đầu tư', aboutPageTitle:'Đội ngũ phát triển Deal Connect',
+        aboutEyebrow:'Đội ngũ phát triển Deal Connect', aboutHeroTitle:'Một đội ngũ, một quy trình kết nối vốn liền mạch', aboutHeroDescription:'Năm thành viên phối hợp từ phân tích tài liệu, kiến trúc hệ thống đến xây dựng trải nghiệm gọi vốn và kết nối nhà đầu tư.', teamEyebrow:'Thành viên đội', teamTitle:'Những người xây dựng sản phẩm', teamComplete:'Đội ngũ gồm 5 thành viên',
+        rolePresentationTag:'Pitch & Thuyết trình', roleArchitectureTag:'Kiến trúc', roleRetrievalTag:'Truy xuất dữ liệu', roleMatchingTag:'Matching & Triển khai', roleOutreachTag:'Tự động hóa tiếp cận',
+        khanhRole:'Pitch Deck & Thuyết trình', khanhDescription:'Xây dựng câu chuyện sản phẩm, hoàn thiện pitch deck và đại diện đội trình bày giải pháp.', bachRole:'Frontend & Kiến trúc hệ thống', bachDescription:'Thiết kế trải nghiệm người dùng, xây dựng frontend và định hình kiến trúc tổng thể của hệ thống.', dungRole:'PDF Parser & Truy xuất dữ liệu', dungDescription:'Phụ trách bóc tách nội dung PDF, chuẩn hóa dữ liệu và xây dựng luồng truy xuất thông tin.', minhRole:'Semantic Matching & Triển khai', minhDescription:'Phát triển thuật toán semantic matching, tối ưu xếp hạng nhà đầu tư và triển khai hệ thống.', quanRole:'Đặt lịch & Sinh email', quanDescription:'Xây dựng chức năng đặt lịch với nhà đầu tư và tự động tạo email tiếp cận phù hợp.',
+        collaborationTitle:'Phối hợp theo một chuỗi giá trị', collaborationDescription:'Mỗi thành viên sở hữu một mô-đun trọng yếu nhưng cùng hướng tới một trải nghiệm thống nhất cho Founder.', flowUnderstand:'Hiểu hồ sơ', flowUnderstandText:'PDF parser và retrieval tạo nền dữ liệu đáng tin cậy.', flowConnect:'Tìm kết nối', flowConnectText:'Semantic matching xác định và xếp hạng nhà đầu tư phù hợp.', flowEngage:'Chủ động tiếp cận', flowEngageText:'Email generation và calendar scheduling biến kết quả thành hành động.', flowPresent:'Truyền tải giá trị', flowPresentText:'Frontend và pitch deck hoàn thiện trải nghiệm sản phẩm và câu chuyện dự án.',
         heroEyebrow:'Phân tích tài liệu bảo mật', heroTitle:'Biến hồ sơ PDF thành thông tin đầu tư có cấu trúc', heroDescription:'Tải hồ sơ dự án, trích xuất dữ liệu trọng yếu và nhận danh sách nhà đầu tư phù hợp trong một quy trình thống nhất.', metricUpload:'Tải hồ sơ', metricExtract:'Trích xuất dữ liệu', metricMatch:'Đối chiếu quỹ',
         stepOne:'Bước 1', uploadTitle:'Tải hồ sơ nguồn', uploadDescription:'Chọn hồ sơ PDF để hệ thống phân tích thông tin doanh nghiệp, vòng gọi vốn và nhu cầu đầu tư.', pdfLimit:'PDF · Tối đa 10 MB', dropPrimary:'Nhấp để chọn tệp', dropSecondary:' hoặc kéo thả vào đây', dropHint:'Hồ sơ được gửi trực tiếp tới backend riêng của bạn', selectedFile:'Tệp đã chọn', runPipeline:'Bắt đầu phân tích',
         processing:'Đang xử lý', loadingDescription:'Hệ thống đang chuẩn hóa hồ sơ, đối chiếu tiêu chí và xây dựng kết quả đề xuất.', progress:'Tiến độ', analysisComplete:'Phân tích hoàn tất', resultsTitle:'Danh sách nhà đầu tư phù hợp', systemStatus:'Trạng thái hệ thống', frontend:'Frontend', connection:'Kết nối', transport:'Truyền tải', workflowTitle:'Quy trình xử lý', workflowUploadTitle:'Tiếp nhận hồ sơ', workflowUploadText:'Tệp PDF được chuyển qua kết nối bảo mật.', workflowExtractTitle:'Chuẩn hóa dữ liệu', workflowExtractText:'Thông tin chính được chuyển thành cấu trúc có thể phân tích.', workflowMatchTitle:'Xếp hạng phù hợp', workflowMatchText:'Các quỹ được sắp xếp theo mức độ tương thích.',
-        apiNotConfigured:'Chưa cấu hình API URL', backendOnline:'Backend Online', missingApiKey:'Thiếu Gemini API Key', backendOffline:'Backend Offline', serverReturned:'Máy chủ trả về', processingGeneric:'Đang xử lý...', uploadToBackend:'Đang tải PDF lên backend...', analysisFailed:'Phân tích thất bại', jobTimeout:'Tác vụ vượt quá 30 phút. Hãy kiểm tra máy backend.', configAlert:'Hãy cấu hình API_BASE_URL trong file config.js trước.', errorPrefix:'Lỗi', noQualifiedFunds:'Không có quỹ thỏa điều kiện lọc', noResultsMessage:'Không tìm thấy quỹ phù hợp đồng thời theo ngành, vòng gọi vốn và số tiền gọi vốn.', unnamedFund:'Chưa có tên quỹ', focus:'Lĩnh vực', notUpdated:'Chưa cập nhật', compatibility:'Độ tương thích', rationale:'Lý do phù hợp', noReason:'Chưa có lý do', viewEmail:'Xem nội dung email đề xuất', noEmail:'Chưa tạo được nội dung email.', resultCount:'{count} quỹ phù hợp'
+        apiNotConfigured:'Chưa cấu hình API URL', backendOnline:'Backend Online', missingApiKey:'Thiếu Gemini API Key', backendOffline:'Backend Offline', serverReturned:'Máy chủ trả về', processingGeneric:'Đang xử lý...', uploadToBackend:'Đang tải PDF lên backend...', analysisFailed:'Phân tích thất bại', jobTimeout:'Tác vụ vượt quá 30 phút. Hãy kiểm tra máy backend.', configAlert:'Hãy cấu hình API_BASE_URL trong file config.js trước.', errorPrefix:'Lỗi', noQualifiedFunds:'Không có quỹ thỏa điều kiện lọc', noResultsMessage:'Không tìm thấy quỹ phù hợp đồng thời theo ngành, vòng gọi vốn và số tiền gọi vốn.', unnamedFund:'Chưa có tên quỹ', focus:'Lĩnh vực', notUpdated:'Chưa cập nhật', compatibility:'Độ tương thích', rationale:'Lý do phù hợp', noReason:'Chưa có lý do', viewEmail:'Xem nội dung email đề xuất', noEmail:'Chưa tạo được nội dung email.', resultCount:'{count} quỹ phù hợp', scheduleMeeting:'Xem và chọn lịch', scheduleEyebrow:'Lịch khả dụng', scheduleTitle:'Chọn thời gian gặp nhà đầu tư', scheduleLoading:'Đang tìm thời gian phù hợp...', scheduleLoadingDescription:'Hệ thống đang đối chiếu lịch mock của hai bên để tìm các khoảng thời gian rảnh chung.', availableSchedule:'Các khung giờ phù hợp', scheduleNotice:'Chọn một khung giờ phù hợp, sau đó bấm xác nhận lịch.', availableSlotCount:'Tìm thấy {count} khung giờ phù hợp', noAvailableSchedule:'Không tìm thấy khoảng thời gian rảnh chung phù hợp.', chooseSlotHint:'Vui lòng chọn một khung giờ trước khi xác nhận.', confirmSchedule:'Xác nhận lịch', confirmingSchedule:'Đang xác nhận...', scheduleConfirmedTitle:'Lịch đã được xác nhận', scheduleConfirmedDescription:'Startup đã chọn khung giờ này để gặp nhà đầu tư.', chooseSlotRequired:'Vui lòng chọn một khung giờ.', closeSchedule:'Đóng', scheduleFailed:'Không thể tải lịch phù hợp', confirmScheduleFailed:'Không thể xác nhận lịch'
       },
       en: {
-        brandSubtitle:'Capital discovery workspace', workspace:'Workspace', navDocumentIntelligence:'Document Intelligence', localProcessing:'Local processing enabled', privacyNote:'Documents are processed through your private backend connection.', pageTitle:'Investment Document Intelligence',
+        brandSubtitle:'Capital discovery workspace', workspace:'Workspace', navDocumentIntelligence:'Document Intelligence', navAboutUs:'About Us', localProcessing:'Local processing enabled', privacyNote:'Documents are processed through your private backend connection.', pageTitle:'Investment Document Intelligence', aboutPageTitle:'Meet the Deal Connect Team',
+        aboutEyebrow:'The team behind Deal Connect', aboutHeroTitle:'One team, one seamless capital-connection workflow', aboutHeroDescription:'Five members work across document intelligence, system architecture, investor outreach, and product storytelling.', teamEyebrow:'Team members', teamTitle:'The people building the product', teamComplete:'5-member team',
+        rolePresentationTag:'Pitch & Presentation', roleArchitectureTag:'Architecture', roleRetrievalTag:'Data Retrieval', roleMatchingTag:'Matching & Deployment', roleOutreachTag:'Outreach Automation',
+        khanhRole:'Pitch Deck & Presentation', khanhDescription:'Shapes the product story, creates the pitch deck, and represents the team during presentations.', bachRole:'Frontend & System Architecture', bachDescription:'Designs the user experience, develops the frontend, and defines the overall system architecture.', dungRole:'PDF Parser & Retrieval', dungDescription:'Builds PDF extraction, data normalization, and the information-retrieval pipeline.', minhRole:'Semantic Matching & Deployment', minhDescription:'Develops semantic matching, improves investor ranking, and deploys the system.', quanRole:'Calendar Scheduling & Email Generation', quanDescription:'Builds investor scheduling and generates tailored outreach emails.',
+        collaborationTitle:'Working as one value chain', collaborationDescription:'Each member owns a critical module while contributing to one coherent Founder experience.', flowUnderstand:'Understand the document', flowUnderstandText:'PDF parsing and retrieval establish a reliable data foundation.', flowConnect:'Find the right connection', flowConnectText:'Semantic matching identifies and ranks suitable investors.', flowEngage:'Turn insight into outreach', flowEngageText:'Email generation and calendar scheduling convert recommendations into action.', flowPresent:'Communicate the value', flowPresentText:'Frontend and pitch deck complete the product experience and project narrative.',
         heroEyebrow:'Secure document intelligence', heroTitle:'Turn PDF pitch decks into structured investment intelligence', heroDescription:'Upload a company profile, extract critical fundraising data, and receive a ranked investor shortlist in one streamlined workflow.', metricUpload:'Upload document', metricExtract:'Extract data', metricMatch:'Rank investors',
         stepOne:'Step 1', uploadTitle:'Upload source document', uploadDescription:'Select a PDF for analysis of company profile, funding stage, and capital requirements.', pdfLimit:'PDF · Up to 10 MB', dropPrimary:'Click to choose a file', dropSecondary:' or drag and drop it here', dropHint:'Your document is sent directly to your private backend', selectedFile:'Selected file', runPipeline:'Start analysis',
         processing:'Processing', loadingDescription:'The system is normalizing the document, evaluating criteria, and preparing ranked recommendations.', progress:'Progress', analysisComplete:'Analysis complete', resultsTitle:'Recommended investors', systemStatus:'System status', frontend:'Frontend', connection:'Connection', transport:'Transport', workflowTitle:'Processing workflow', workflowUploadTitle:'Receive document', workflowUploadText:'The PDF is transferred through a secure connection.', workflowExtractTitle:'Normalize data', workflowExtractText:'Key information is transformed into an analysis-ready structure.', workflowMatchTitle:'Rank compatibility', workflowMatchText:'Investors are ranked by overall fit.',
-        apiNotConfigured:'API URL not configured', backendOnline:'Backend Online', missingApiKey:'Gemini API key missing', backendOffline:'Backend Offline', serverReturned:'Server returned', processingGeneric:'Processing...', uploadToBackend:'Uploading PDF to backend...', analysisFailed:'Analysis failed', jobTimeout:'The task exceeded 30 minutes. Please check the backend machine.', configAlert:'Configure API_BASE_URL in config.js first.', errorPrefix:'Error', noQualifiedFunds:'No investors passed all filters', noResultsMessage:'No investor matched the industry, funding stage, and fundraising amount at the same time.', unnamedFund:'Unnamed investor', focus:'Focus', notUpdated:'Not available', compatibility:'Compatibility', rationale:'Match rationale', noReason:'No rationale available', viewEmail:'View suggested outreach email', noEmail:'No email content was generated.', resultCount:'{count} matching investors'
+        apiNotConfigured:'API URL not configured', backendOnline:'Backend Online', missingApiKey:'Gemini API key missing', backendOffline:'Backend Offline', serverReturned:'Server returned', processingGeneric:'Processing...', uploadToBackend:'Uploading PDF to backend...', analysisFailed:'Analysis failed', jobTimeout:'The task exceeded 30 minutes. Please check the backend machine.', configAlert:'Configure API_BASE_URL in config.js first.', errorPrefix:'Error', noQualifiedFunds:'No investors passed all filters', noResultsMessage:'No investor matched the industry, funding stage, and fundraising amount at the same time.', unnamedFund:'Unnamed investor', focus:'Focus', notUpdated:'Not available', compatibility:'Compatibility', rationale:'Match rationale', noReason:'No rationale available', viewEmail:'View suggested outreach email', noEmail:'No email content was generated.', resultCount:'{count} matching investors', scheduleMeeting:'View and select time', scheduleEyebrow:'Availability', scheduleTitle:'Select a meeting time', scheduleLoading:'Finding a suitable time...', scheduleLoadingDescription:'The system is comparing both mock calendars to find their common available time slots.', availableSchedule:'Suitable time slots', scheduleNotice:'Select a suitable time slot, then confirm the meeting.', availableSlotCount:'{count} suitable time slots found', noAvailableSchedule:'No suitable common time slot was found.', chooseSlotHint:'Select a time slot before confirming.', confirmSchedule:'Confirm meeting', confirmingSchedule:'Confirming...', scheduleConfirmedTitle:'Meeting time confirmed', scheduleConfirmedDescription:'The startup selected this time to meet the investor.', chooseSlotRequired:'Please select a time slot.', closeSchedule:'Close', scheduleFailed:'Unable to load available times', confirmScheduleFailed:'Unable to confirm the meeting'
       }
     };
 
@@ -292,6 +517,40 @@
       let value = translations[currentLanguage]?.[key] ?? translations.vi[key] ?? key;
       Object.entries(replacements).forEach(([name, replacement]) => { value = value.replace(`{${name}}`, replacement); });
       return value;
+    }
+
+    function showPage(page) {
+      currentPage = page === 'about' ? 'about' : 'workspace';
+
+      document.getElementById('workspace-page').classList.toggle('hidden', currentPage !== 'workspace');
+      document.getElementById('about-page').classList.toggle('hidden', currentPage !== 'about');
+
+      const workspaceButton = document.getElementById('nav-workspace');
+      const aboutButton = document.getElementById('nav-about');
+
+      const activeButtonClasses = ['bg-gradient-to-r','from-blue-600','to-indigo-600','text-white','shadow-lg','shadow-blue-950/30'];
+      const inactiveButtonClasses = ['text-slate-300','hover:bg-white/[.06]','hover:text-white'];
+
+      [workspaceButton, aboutButton].forEach(button => {
+        const active = (button === workspaceButton && currentPage === 'workspace') || (button === aboutButton && currentPage === 'about');
+        activeButtonClasses.forEach(className => button.classList.toggle(className, active));
+        inactiveButtonClasses.forEach(className => button.classList.toggle(className, !active));
+
+        const icon = button.querySelector('.nav-icon');
+        icon.classList.toggle('bg-white/15', active);
+        icon.classList.toggle('bg-white/[.06]', !active);
+        icon.classList.toggle('text-slate-400', !active);
+      });
+
+      document.getElementById('header-section-label').textContent = currentPage === 'about'
+        ? t('navAboutUs')
+        : t('navDocumentIntelligence');
+
+      document.getElementById('header-page-title').textContent = currentPage === 'about'
+        ? t('aboutPageTitle')
+        : t('pageTitle');
+
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     function setLanguage(language) {
@@ -309,6 +568,7 @@
         inactive.forEach(c => button.classList.toggle(c, !selected));
       });
       updateThemeIcon();
+      showPage(currentPage);
       checkBackend();
     }
 
@@ -437,6 +697,8 @@
     }
 
     function renderResults(data) {
+      latestMatches = Array.isArray(data) ? data : [];
+      data = latestMatches;
       document.querySelector('[data-count-text]').innerText = data.length ? t('resultCount',{count:data.length}) : t('noQualifiedFunds');
       const listContainer = document.getElementById('investor-list');
       listContainer.innerHTML = '';
@@ -474,10 +736,210 @@
                 <summary class="flex cursor-pointer list-none items-center justify-between gap-4 bg-slate-50 px-4 py-3.5 text-sm font-bold text-slate-700 transition hover:bg-slate-100 dark:bg-slate-950/60 dark:text-slate-200 dark:hover:bg-slate-800"><span class="flex items-center gap-2"><i class="fa-regular fa-envelope text-slate-500"></i>${escapeHTML(t('viewEmail'))}</span><i class="fa-solid fa-chevron-down text-xs text-slate-400 transition group-open:rotate-180"></i></summary>
                 <div class="whitespace-pre-wrap bg-slate-950 p-5 font-mono text-sm leading-7 text-emerald-300">${escapeHTML(item.generated_email || t('noEmail'))}</div>
               </details>
+              <div class="mt-4 flex justify-end">
+                <button type="button" onclick="scheduleInvestor(${index})" class="inline-flex items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-violet-600 to-indigo-600 px-5 py-3 text-sm font-bold text-white shadow-lg shadow-indigo-500/20 transition hover:-translate-y-0.5 hover:from-violet-700 hover:to-indigo-700">
+                  <i class="fa-regular fa-calendar-check"></i>
+                  <span>${escapeHTML(t('scheduleMeeting'))}</span>
+                </button>
+              </div>
             </div>
           </article>`;
         listContainer.insertAdjacentHTML('beforeend', cardHTML);
       });
+    }
+
+    function openScheduleModal(investorName) {
+      const modal = document.getElementById('schedule-modal');
+      availableScheduleSlots = [];
+      selectedScheduleSlot = null;
+      confirmedSchedule = null;
+
+      document.getElementById('schedule-investor-name').textContent = investorName || '';
+      document.getElementById('schedule-loading').classList.remove('hidden');
+      document.getElementById('schedule-result').classList.add('hidden');
+      document.getElementById('schedule-error').classList.add('hidden');
+      document.getElementById('schedule-error').textContent = '';
+      document.getElementById('schedule-confirmed').classList.add('hidden');
+
+      const confirmButton = document.getElementById('confirm-schedule-button');
+      confirmButton.disabled = true;
+      confirmButton.classList.remove('hidden');
+
+      modal.classList.remove('hidden');
+      modal.classList.add('flex');
+      document.body.classList.add('overflow-hidden');
+    }
+
+    function closeScheduleModal() {
+      const modal = document.getElementById('schedule-modal');
+      modal.classList.add('hidden');
+      modal.classList.remove('flex');
+      document.body.classList.remove('overflow-hidden');
+    }
+
+    function renderScheduleResult(schedule) {
+      document.getElementById('schedule-loading').classList.add('hidden');
+      document.getElementById('schedule-error').classList.add('hidden');
+      document.getElementById('schedule-result').classList.remove('hidden');
+
+      availableScheduleSlots = Array.isArray(schedule.available_slots)
+        ? schedule.available_slots
+        : [];
+      selectedScheduleSlot = null;
+      confirmedSchedule = null;
+
+      document.getElementById('schedule-slot-count').textContent =
+        t('availableSlotCount', { count: availableScheduleSlots.length });
+
+      document.getElementById('schedule-empty').classList.toggle(
+        'hidden',
+        availableScheduleSlots.length > 0
+      );
+      document.getElementById('schedule-selection-hint').classList.toggle(
+        'hidden',
+        availableScheduleSlots.length === 0
+      );
+
+      const confirmButton = document.getElementById('confirm-schedule-button');
+      confirmButton.disabled = true;
+      confirmButton.classList.toggle(
+        'hidden',
+        availableScheduleSlots.length === 0
+      );
+
+      renderScheduleSlots();
+    }
+
+    function renderScheduleSlots() {
+      const slotList = document.getElementById('schedule-slot-list');
+      slotList.innerHTML = '';
+      slotList.classList.toggle(
+        'hidden',
+        availableScheduleSlots.length === 0
+      );
+
+      availableScheduleSlots.forEach((slot, index) => {
+        const isSelected =
+          selectedScheduleSlot?.start_time_iso === slot.start_time_iso &&
+          selectedScheduleSlot?.end_time_iso === slot.end_time_iso;
+
+        slotList.insertAdjacentHTML('beforeend', `
+          <button
+            type="button"
+            onclick="selectScheduleSlot(${index})"
+            class="w-full rounded-2xl border p-4 text-left transition ${
+              isSelected
+                ? 'border-blue-500 bg-blue-50 ring-2 ring-blue-500/20 dark:border-blue-400 dark:bg-blue-500/[.12]'
+                : 'border-slate-200 bg-white hover:-translate-y-0.5 hover:border-blue-300 hover:shadow-md dark:border-slate-700 dark:bg-slate-900 dark:hover:border-blue-700'
+            }"
+            aria-pressed="${isSelected ? 'true' : 'false'}"
+          >
+            <div class="flex items-center justify-between gap-3">
+              <div>
+                <div class="text-sm font-extrabold text-slate-950 dark:text-white">${escapeHTML(slot.start_time || '')} - ${escapeHTML(slot.end_time || '')}</div>
+                <div class="mt-1 text-xs text-slate-500 dark:text-slate-400">${escapeHTML(slot.date || '')}</div>
+              </div>
+              <span class="flex h-9 w-9 items-center justify-center rounded-xl ${
+                isSelected
+                  ? 'bg-blue-600 text-white'
+                  : 'bg-blue-50 text-blue-600 dark:bg-blue-500/10 dark:text-blue-400'
+              }">
+                <i class="fa-solid ${isSelected ? 'fa-check' : 'fa-clock'}"></i>
+              </span>
+            </div>
+          </button>
+        `);
+      });
+    }
+
+    function selectScheduleSlot(index) {
+      if (confirmedSchedule) return;
+
+      const slot = availableScheduleSlots[index];
+      if (!slot) return;
+
+      selectedScheduleSlot = slot;
+      document.getElementById('confirm-schedule-button').disabled = false;
+      document.getElementById('schedule-selection-hint').innerHTML = `
+        <i class="fa-solid fa-circle-check mr-2 text-emerald-500"></i>
+        <span>${escapeHTML(slot.label || '')}</span>
+      `;
+      renderScheduleSlots();
+    }
+
+    async function confirmSelectedSchedule() {
+      if (!selectedScheduleSlot || !schedulingInvestor) {
+        alert(t('chooseSlotRequired'));
+        return;
+      }
+
+      const confirmButton = document.getElementById('confirm-schedule-button');
+      const confirmLabel = confirmButton.querySelector('span');
+      confirmButton.disabled = true;
+      confirmLabel.textContent = t('confirmingSchedule');
+
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/calendar/confirm`, {
+          method: 'POST',
+          headers: apiHeaders({ 'Content-Type': 'application/json' }),
+          body: JSON.stringify({
+            investor: schedulingInvestor,
+            selected_slot: {
+              start_time_iso: selectedScheduleSlot.start_time_iso,
+              end_time_iso: selectedScheduleSlot.end_time_iso
+            }
+          })
+        });
+
+        confirmedSchedule = await parseJsonResponse(response);
+
+        document.getElementById('confirmed-slot-label').textContent =
+          confirmedSchedule.selected_slot?.label ||
+          selectedScheduleSlot.label ||
+          '';
+
+        document.getElementById('schedule-confirmed').classList.remove('hidden');
+        document.getElementById('schedule-selection-hint').classList.add('hidden');
+        confirmButton.classList.add('hidden');
+        renderScheduleSlots();
+      } catch (error) {
+        console.error(error);
+        confirmButton.disabled = false;
+        const errorBox = document.getElementById('schedule-error');
+        errorBox.classList.remove('hidden');
+        errorBox.textContent = `${t('confirmScheduleFailed')}: ${error.message}`;
+      } finally {
+        confirmLabel.textContent = t('confirmSchedule');
+      }
+    }
+
+    async function scheduleInvestor(index) {
+      const match = latestMatches[index];
+      const investor = match?.investor;
+
+      if (!investor) {
+        alert(`${t('errorPrefix')}: ${t('scheduleFailed')}`);
+        return;
+      }
+
+      schedulingInvestor = investor;
+      openScheduleModal(investor.name || t('unnamedFund'));
+
+      try {
+        const response = await fetch(`${API_BASE_URL}/api/calendar/schedule`, {
+          method: 'POST',
+          headers: apiHeaders({ 'Content-Type': 'application/json' }),
+          body: JSON.stringify({ investor })
+        });
+        const schedule = await parseJsonResponse(response);
+        renderScheduleResult(schedule);
+      } catch (error) {
+        console.error(error);
+        document.getElementById('schedule-loading').classList.add('hidden');
+        const errorBox = document.getElementById('schedule-error');
+        errorBox.classList.remove('hidden');
+        errorBox.textContent = `${t('scheduleFailed')}: ${error.message}`;
+      }
     }
 
     function setupDragAndDrop() {
@@ -492,6 +954,13 @@
         handleFileUpload(input);
       });
     }
+
+    document.getElementById('schedule-modal').addEventListener('click', event => {
+      if (event.target.id === 'schedule-modal') closeScheduleModal();
+    });
+    document.addEventListener('keydown', event => {
+      if (event.key === 'Escape') closeScheduleModal();
+    });
 
     setLanguage(currentLanguage);
     updateThemeIcon();
