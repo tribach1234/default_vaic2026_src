@@ -100,6 +100,11 @@
           <span data-i18n="navDocumentIntelligence">Phân tích hồ sơ</span>
         </button>
 
+        <button type="button" id="nav-investors" onclick="showPage('investors')" class="mt-2 flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left text-sm font-semibold text-slate-300 transition hover:bg-white/[.06] hover:text-white">
+          <span class="nav-icon flex h-9 w-9 items-center justify-center rounded-lg bg-white/[.06] text-slate-400"><i class="fa-solid fa-building-columns"></i></span>
+          <span data-i18n="navInvestors">Nhà đầu tư</span>
+        </button>
+
         <button type="button" id="nav-about" onclick="showPage('about')" class="mt-2 flex w-full items-center gap-3 rounded-xl px-4 py-3.5 text-left text-sm font-semibold text-slate-300 transition hover:bg-white/[.06] hover:text-white">
           <span class="nav-icon flex h-9 w-9 items-center justify-center rounded-lg bg-white/[.06] text-slate-400"><i class="fa-solid fa-users"></i></span>
           <span data-i18n="navAboutUs">Về chúng tôi</span>
@@ -269,6 +274,84 @@
         </div>
       </div>
 
+      <!-- INVESTORS DIRECTORY PAGE -->
+      <div id="investors-page" class="hidden mx-auto max-w-[1440px] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
+        <section class="relative overflow-hidden rounded-3xl border border-cyan-200/60 bg-gradient-to-br from-slate-950 via-cyan-950 to-blue-950 px-6 py-9 text-white shadow-soft sm:px-8 lg:px-10 lg:py-12 dark:border-cyan-900/50">
+          <div class="absolute -right-16 -top-24 h-72 w-72 rounded-full bg-cyan-500/20 blur-3xl"></div>
+          <div class="absolute -bottom-28 left-1/3 h-72 w-72 rounded-full bg-blue-500/20 blur-3xl"></div>
+          <div class="relative grid gap-8 lg:grid-cols-[1.25fr_.75fr] lg:items-end">
+            <div class="max-w-3xl">
+              <span class="inline-flex items-center gap-2 rounded-full border border-white/15 bg-white/10 px-3 py-1.5 text-xs font-semibold text-cyan-100">
+                <i class="fa-solid fa-building-columns text-cyan-300"></i>
+                <span data-i18n="investorsEyebrow">Danh mục nhà đầu tư</span>
+              </span>
+              <h2 class="mt-5 text-3xl font-extrabold leading-tight tracking-[-.03em] sm:text-4xl lg:text-[42px]" data-i18n="investorsHeroTitle">Khám phá 50 nhà đầu tư trong hệ sinh thái Deal Connect</h2>
+              <p class="mt-4 max-w-2xl text-sm leading-7 text-slate-300 sm:text-base" data-i18n="investorsHeroDescription">Tìm kiếm theo tên quỹ, lĩnh vực, giai đoạn đầu tư và xem đầy đủ tiêu chí, luận điểm đầu tư cùng khung giờ khả dụng.</p>
+            </div>
+            <div class="grid grid-cols-2 gap-3">
+              <div class="rounded-2xl border border-white/10 bg-white/[.07] p-4 backdrop-blur">
+                <div id="investor-total-stat" class="text-3xl font-extrabold">50</div>
+                <div class="mt-1 text-[11px] leading-4 text-slate-300" data-i18n="investorTotalLabel">Nhà đầu tư</div>
+              </div>
+              <div class="rounded-2xl border border-white/10 bg-white/[.07] p-4 backdrop-blur">
+                <div id="investor-visible-stat" class="text-3xl font-extrabold">50</div>
+                <div class="mt-1 text-[11px] leading-4 text-slate-300" data-i18n="investorVisibleLabel">Đang hiển thị</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="mt-8 rounded-3xl border border-slate-200/80 bg-white p-5 shadow-soft sm:p-6 dark:border-slate-800 dark:bg-slate-900/80">
+          <div class="grid gap-4 lg:grid-cols-[minmax(0,1fr)_240px_240px_auto]">
+            <label class="relative block">
+              <span class="sr-only" data-i18n="investorSearchLabel">Tìm kiếm nhà đầu tư</span>
+              <i class="fa-solid fa-magnifying-glass pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 text-slate-400"></i>
+              <input id="investor-search" type="search" oninput="applyInvestorFilters()" data-i18n-placeholder="investorSearchPlaceholder" placeholder="Tìm theo tên, lĩnh vực, công nghệ..." class="h-12 w-full rounded-xl border border-slate-200 bg-slate-50 pl-11 pr-4 text-sm font-medium text-slate-900 outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-500/10 dark:border-slate-700 dark:bg-slate-950/60 dark:text-white dark:placeholder:text-slate-500">
+            </label>
+
+            <select id="investor-industry-filter" onchange="applyInvestorFilters()" class="h-12 rounded-xl border border-slate-200 bg-slate-50 px-4 text-sm font-semibold text-slate-700 outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-500/10 dark:border-slate-700 dark:bg-slate-950/60 dark:text-slate-200">
+              <option value="" data-i18n="allIndustries">Tất cả lĩnh vực</option>
+            </select>
+
+            <select id="investor-stage-filter" onchange="applyInvestorFilters()" class="h-12 rounded-xl border border-slate-200 bg-slate-50 px-4 text-sm font-semibold text-slate-700 outline-none transition focus:border-blue-400 focus:ring-4 focus:ring-blue-500/10 dark:border-slate-700 dark:bg-slate-950/60 dark:text-slate-200">
+              <option value="" data-i18n="allStages">Tất cả giai đoạn</option>
+            </select>
+
+            <button type="button" onclick="resetInvestorFilters()" class="inline-flex h-12 items-center justify-center gap-2 rounded-xl border border-slate-200 bg-white px-5 text-sm font-bold text-slate-600 transition hover:border-blue-300 hover:bg-blue-50 hover:text-blue-700 dark:border-slate-700 dark:bg-slate-900 dark:text-slate-300 dark:hover:border-blue-700 dark:hover:bg-blue-500/10 dark:hover:text-blue-300">
+              <i class="fa-solid fa-rotate-left"></i>
+              <span data-i18n="resetFilters">Đặt lại</span>
+            </button>
+          </div>
+        </section>
+
+        <section class="mt-6">
+          <div class="flex flex-col justify-between gap-3 sm:flex-row sm:items-end">
+            <div>
+              <p class="text-xs font-bold uppercase tracking-[.18em] text-blue-600 dark:text-blue-400" data-i18n="investorDirectoryEyebrow">Investor Directory</p>
+              <h2 class="mt-2 text-2xl font-extrabold tracking-tight text-slate-950 dark:text-white" data-i18n="investorDirectoryTitle">Thông tin chi tiết các quỹ</h2>
+            </div>
+            <span id="investor-filter-count" class="inline-flex w-fit items-center gap-2 rounded-full border border-blue-200 bg-blue-50 px-4 py-2 text-xs font-bold text-blue-700 dark:border-blue-900 dark:bg-blue-500/10 dark:text-blue-300">
+              <i class="fa-solid fa-filter"></i>
+              <span data-investor-count>50 nhà đầu tư</span>
+            </span>
+          </div>
+
+          <div id="investor-directory-loading" class="mt-6 rounded-3xl border border-slate-200/80 bg-white p-10 text-center shadow-soft dark:border-slate-800 dark:bg-slate-900/80">
+            <div class="mx-auto h-12 w-12 animate-spin rounded-full border-4 border-blue-100 border-t-blue-600 dark:border-slate-800 dark:border-t-blue-400"></div>
+            <p class="mt-4 text-sm font-bold text-slate-700 dark:text-slate-200" data-i18n="loadingInvestors">Đang tải danh sách nhà đầu tư...</p>
+          </div>
+
+          <div id="investor-directory-error" class="mt-6 hidden rounded-2xl border border-rose-200 bg-rose-50 p-5 text-sm font-semibold leading-6 text-rose-700 dark:border-rose-900/70 dark:bg-rose-500/[.08] dark:text-rose-200"></div>
+
+          <div id="investor-directory-empty" class="mt-6 hidden rounded-2xl border border-amber-200 bg-amber-50 p-7 text-center text-sm font-semibold text-amber-800 dark:border-amber-900/70 dark:bg-amber-500/[.08] dark:text-amber-200">
+            <i class="fa-solid fa-magnifying-glass-minus text-xl"></i>
+            <p class="mt-3" data-i18n="noInvestorsFound">Không tìm thấy nhà đầu tư phù hợp với bộ lọc hiện tại.</p>
+          </div>
+
+          <div id="investor-directory-grid" class="mt-6 grid gap-5 xl:grid-cols-2"></div>
+        </section>
+      </div>
+
       <!-- ABOUT US PAGE -->
       <div id="about-page" class="hidden mx-auto max-w-[1440px] px-4 py-8 sm:px-6 lg:px-10 lg:py-10">
         <section class="relative overflow-hidden rounded-3xl border border-indigo-200/60 bg-gradient-to-br from-slate-950 via-indigo-950 to-blue-950 px-6 py-9 text-white shadow-soft sm:px-8 lg:px-10 lg:py-12 dark:border-indigo-900/50">
@@ -305,7 +388,7 @@
                   <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-fuchsia-500 to-violet-600 text-lg font-extrabold text-white shadow-lg shadow-fuchsia-500/20">K</div>
                   <span class="rounded-full bg-fuchsia-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-fuchsia-700 dark:bg-fuchsia-500/10 dark:text-fuchsia-300" data-i18n="rolePresentationTag">Pitch & Presentation</span>
                 </div>
-                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Khanh</h3>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Tống Thoại Khanh</h3>
                 <p class="mt-1 text-sm font-semibold text-fuchsia-600 dark:text-fuchsia-400" data-i18n="khanhRole">Pitch Deck & Thuyết trình</p>
                 <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="khanhDescription">Xây dựng câu chuyện sản phẩm, hoàn thiện pitch deck và đại diện đội trình bày giải pháp.</p>
               </div>
@@ -318,7 +401,7 @@
                   <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-500 to-indigo-600 text-lg font-extrabold text-white shadow-lg shadow-blue-500/20">B</div>
                   <span class="rounded-full bg-blue-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-blue-700 dark:bg-blue-500/10 dark:text-blue-300" data-i18n="roleArchitectureTag">Architecture</span>
                 </div>
-                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Bách</h3>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Trịnh Trí Bách <span class="ml-1 align-middle text-xs font-extrabold uppercase tracking-[.12em] text-blue-600 dark:text-blue-400">(Captain)</span></h3>
                 <p class="mt-1 text-sm font-semibold text-blue-600 dark:text-blue-400" data-i18n="bachRole">Frontend & Kiến trúc hệ thống</p>
                 <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="bachDescription">Thiết kế trải nghiệm người dùng, xây dựng frontend và định hình kiến trúc tổng thể của hệ thống.</p>
               </div>
@@ -331,7 +414,7 @@
                   <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-orange-500 to-rose-500 text-lg font-extrabold text-white shadow-lg shadow-orange-500/20">D</div>
                   <span class="rounded-full bg-orange-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-orange-700 dark:bg-orange-500/10 dark:text-orange-300" data-i18n="roleRetrievalTag">Data Retrieval</span>
                 </div>
-                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Dũng</h3>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Phạm Tấn Dũng</h3>
                 <p class="mt-1 text-sm font-semibold text-orange-600 dark:text-orange-400" data-i18n="dungRole">PDF Parser & Truy xuất dữ liệu</p>
                 <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="dungDescription">Phụ trách bóc tách nội dung PDF, chuẩn hóa dữ liệu và xây dựng luồng truy xuất thông tin.</p>
               </div>
@@ -344,7 +427,7 @@
                   <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-emerald-500 to-teal-600 text-lg font-extrabold text-white shadow-lg shadow-emerald-500/20">HM</div>
                   <span class="rounded-full bg-emerald-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-emerald-700 dark:bg-emerald-500/10 dark:text-emerald-300" data-i18n="roleMatchingTag">Matching & Deploy</span>
                 </div>
-                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Hiển Minh</h3>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Trần Nguyên Hiển Minh</h3>
                 <p class="mt-1 text-sm font-semibold text-emerald-600 dark:text-emerald-400" data-i18n="minhRole">Semantic Matching & Triển khai</p>
                 <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="minhDescription">Phát triển thuật toán semantic matching, tối ưu xếp hạng nhà đầu tư và triển khai hệ thống.</p>
               </div>
@@ -357,7 +440,7 @@
                   <div class="flex h-14 w-14 items-center justify-center rounded-2xl bg-gradient-to-br from-cyan-500 to-blue-600 text-lg font-extrabold text-white shadow-lg shadow-cyan-500/20">Q</div>
                   <span class="rounded-full bg-cyan-50 px-3 py-1 text-[10px] font-extrabold uppercase tracking-[.12em] text-cyan-700 dark:bg-cyan-500/10 dark:text-cyan-300" data-i18n="roleOutreachTag">Outreach Automation</span>
                 </div>
-                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Quân</h3>
+                <h3 class="mt-5 text-xl font-extrabold text-slate-950 dark:text-white">Nguyễn Hồng Quân</h3>
                 <p class="mt-1 text-sm font-semibold text-cyan-600 dark:text-cyan-400" data-i18n="quanRole">Đặt lịch & Sinh email</p>
                 <p class="mt-4 text-sm leading-7 text-slate-500 dark:text-slate-400" data-i18n="quanDescription">Xây dựng chức năng đặt lịch với nhà đầu tư và tự động tạo email tiếp cận phù hợp.</p>
               </div>
@@ -487,10 +570,14 @@
     let availableScheduleSlots = [];
     let selectedScheduleSlot = null;
     let confirmedSchedule = null;
+    let allInvestors = [];
+    let filteredInvestors = [];
+    let investorDirectoryLoaded = false;
 
     const translations = {
       vi: {
-        brandSubtitle:'Không gian kết nối vốn', workspace:'Không gian làm việc', navDocumentIntelligence:'Phân tích hồ sơ', navAboutUs:'Về chúng tôi', localProcessing:'Xử lý cục bộ đã bật', privacyNote:'Tài liệu được xử lý thông qua kết nối backend riêng của bạn.', pageTitle:'Nền tảng phân tích hồ sơ đầu tư', aboutPageTitle:'Đội ngũ phát triển Deal Connect',
+        brandSubtitle:'Không gian kết nối vốn', workspace:'Không gian làm việc', navDocumentIntelligence:'Phân tích hồ sơ', navInvestors:'Nhà đầu tư', navAboutUs:'Về chúng tôi', localProcessing:'Xử lý cục bộ đã bật', privacyNote:'Tài liệu được xử lý thông qua kết nối backend riêng của bạn.', pageTitle:'Nền tảng phân tích hồ sơ đầu tư', investorsPageTitle:'Danh mục nhà đầu tư Deal Connect', aboutPageTitle:'Đội ngũ phát triển Deal Connect',
+        investorsEyebrow:'Danh mục nhà đầu tư', investorsHeroTitle:'Khám phá 50 nhà đầu tư trong hệ sinh thái Deal Connect', investorsHeroDescription:'Tìm kiếm theo tên quỹ, lĩnh vực, giai đoạn đầu tư và xem đầy đủ tiêu chí, luận điểm đầu tư cùng khung giờ khả dụng.', investorTotalLabel:'Nhà đầu tư', investorVisibleLabel:'Đang hiển thị', investorSearchLabel:'Tìm kiếm nhà đầu tư', investorSearchPlaceholder:'Tìm theo tên, lĩnh vực, công nghệ...', allIndustries:'Tất cả lĩnh vực', allStages:'Tất cả giai đoạn', resetFilters:'Đặt lại', investorDirectoryEyebrow:'Investor Directory', investorDirectoryTitle:'Thông tin chi tiết các quỹ', loadingInvestors:'Đang tải danh sách nhà đầu tư...', noInvestorsFound:'Không tìm thấy nhà đầu tư phù hợp với bộ lọc hiện tại.', investorCount:'{count} nhà đầu tư', investmentStage:'Giai đoạn đầu tư', ticketSize:'Quy mô đầu tư', technologyFocus:'Trọng tâm công nghệ', problemFocus:'Vấn đề quan tâm', investmentThesis:'Luận điểm đầu tư', customerFocus:'Khách hàng mục tiêu', availableTime:'Khung giờ khả dụng', investorDataLoadFailed:'Không thể tải investors_data.json. Hãy đặt file này cùng thư mục với index.html.',
         aboutEyebrow:'Đội ngũ phát triển Deal Connect', aboutHeroTitle:'Một đội ngũ, một quy trình kết nối vốn liền mạch', aboutHeroDescription:'Năm thành viên phối hợp từ phân tích tài liệu, kiến trúc hệ thống đến xây dựng trải nghiệm gọi vốn và kết nối nhà đầu tư.', teamEyebrow:'Thành viên đội', teamTitle:'Những người xây dựng sản phẩm', teamComplete:'Đội ngũ gồm 5 thành viên',
         rolePresentationTag:'Pitch & Thuyết trình', roleArchitectureTag:'Kiến trúc', roleRetrievalTag:'Truy xuất dữ liệu', roleMatchingTag:'Matching & Triển khai', roleOutreachTag:'Tự động hóa tiếp cận',
         khanhRole:'Pitch Deck & Thuyết trình', khanhDescription:'Xây dựng câu chuyện sản phẩm, hoàn thiện pitch deck và đại diện đội trình bày giải pháp.', bachRole:'Frontend & Kiến trúc hệ thống', bachDescription:'Thiết kế trải nghiệm người dùng, xây dựng frontend và định hình kiến trúc tổng thể của hệ thống.', dungRole:'PDF Parser & Truy xuất dữ liệu', dungDescription:'Phụ trách bóc tách nội dung PDF, chuẩn hóa dữ liệu và xây dựng luồng truy xuất thông tin.', minhRole:'Semantic Matching & Triển khai', minhDescription:'Phát triển thuật toán semantic matching, tối ưu xếp hạng nhà đầu tư và triển khai hệ thống.', quanRole:'Đặt lịch & Sinh email', quanDescription:'Xây dựng chức năng đặt lịch với nhà đầu tư và tự động tạo email tiếp cận phù hợp.',
@@ -501,7 +588,8 @@
         apiNotConfigured:'Chưa cấu hình API URL', backendOnline:'Backend Online', missingApiKey:'Thiếu Gemini API Key', backendOffline:'Backend Offline', serverReturned:'Máy chủ trả về', processingGeneric:'Đang xử lý...', uploadToBackend:'Đang tải PDF lên backend...', analysisFailed:'Phân tích thất bại', jobTimeout:'Tác vụ vượt quá 30 phút. Hãy kiểm tra máy backend.', configAlert:'Hãy cấu hình API_BASE_URL trong file config.js trước.', errorPrefix:'Lỗi', noQualifiedFunds:'Không có quỹ thỏa điều kiện lọc', noResultsMessage:'Không tìm thấy quỹ phù hợp đồng thời theo ngành, vòng gọi vốn và số tiền gọi vốn.', unnamedFund:'Chưa có tên quỹ', focus:'Lĩnh vực', notUpdated:'Chưa cập nhật', compatibility:'Độ tương thích', rationale:'Lý do phù hợp', noReason:'Chưa có lý do', viewEmail:'Xem nội dung email đề xuất', noEmail:'Chưa tạo được nội dung email.', resultCount:'{count} quỹ phù hợp', scheduleMeeting:'Xem và chọn lịch', scheduleEyebrow:'Lịch khả dụng', scheduleTitle:'Chọn thời gian gặp nhà đầu tư', scheduleLoading:'Đang tìm thời gian phù hợp...', scheduleLoadingDescription:'Hệ thống đang đối chiếu lịch mock của hai bên để tìm các khoảng thời gian rảnh chung.', availableSchedule:'Các khung giờ phù hợp', scheduleNotice:'Chọn một khung giờ phù hợp, sau đó bấm xác nhận lịch.', availableSlotCount:'Tìm thấy {count} khung giờ phù hợp', noAvailableSchedule:'Không tìm thấy khoảng thời gian rảnh chung phù hợp.', chooseSlotHint:'Vui lòng chọn một khung giờ trước khi xác nhận.', confirmSchedule:'Xác nhận lịch', confirmingSchedule:'Đang xác nhận...', scheduleConfirmedTitle:'Lịch đã được xác nhận', scheduleConfirmedDescription:'Startup đã chọn khung giờ này để gặp nhà đầu tư.', chooseSlotRequired:'Vui lòng chọn một khung giờ.', closeSchedule:'Đóng', scheduleFailed:'Không thể tải lịch phù hợp', confirmScheduleFailed:'Không thể xác nhận lịch'
       },
       en: {
-        brandSubtitle:'Capital discovery workspace', workspace:'Workspace', navDocumentIntelligence:'Document Intelligence', navAboutUs:'About Us', localProcessing:'Local processing enabled', privacyNote:'Documents are processed through your private backend connection.', pageTitle:'Investment Document Intelligence', aboutPageTitle:'Meet the Deal Connect Team',
+        brandSubtitle:'Capital discovery workspace', workspace:'Workspace', navDocumentIntelligence:'Document Intelligence', navInvestors:'Investors', navAboutUs:'About Us', localProcessing:'Local processing enabled', privacyNote:'Documents are processed through your private backend connection.', pageTitle:'Investment Document Intelligence', investorsPageTitle:'Deal Connect Investor Directory', aboutPageTitle:'Meet the Deal Connect Team',
+        investorsEyebrow:'Investor directory', investorsHeroTitle:'Explore 50 investors in the Deal Connect ecosystem', investorsHeroDescription:'Search by fund name, industry, and investment stage, then review each investor’s criteria, thesis, and availability.', investorTotalLabel:'Investors', investorVisibleLabel:'Showing', investorSearchLabel:'Search investors', investorSearchPlaceholder:'Search by name, industry, or technology...', allIndustries:'All industries', allStages:'All stages', resetFilters:'Reset', investorDirectoryEyebrow:'Investor Directory', investorDirectoryTitle:'Detailed fund profiles', loadingInvestors:'Loading investor directory...', noInvestorsFound:'No investors match the current filters.', investorCount:'{count} investors', investmentStage:'Investment stage', ticketSize:'Ticket size', technologyFocus:'Technology focus', problemFocus:'Problem focus', investmentThesis:'Investment thesis', customerFocus:'Customer focus', availableTime:'Available time', investorDataLoadFailed:'Unable to load investors_data.json. Place this file in the same folder as index.html.',
         aboutEyebrow:'The team behind Deal Connect', aboutHeroTitle:'One team, one seamless capital-connection workflow', aboutHeroDescription:'Five members work across document intelligence, system architecture, investor outreach, and product storytelling.', teamEyebrow:'Team members', teamTitle:'The people building the product', teamComplete:'5-member team',
         rolePresentationTag:'Pitch & Presentation', roleArchitectureTag:'Architecture', roleRetrievalTag:'Data Retrieval', roleMatchingTag:'Matching & Deployment', roleOutreachTag:'Outreach Automation',
         khanhRole:'Pitch Deck & Presentation', khanhDescription:'Shapes the product story, creates the pitch deck, and represents the team during presentations.', bachRole:'Frontend & System Architecture', bachDescription:'Designs the user experience, develops the frontend, and defines the overall system architecture.', dungRole:'PDF Parser & Retrieval', dungDescription:'Builds PDF extraction, data normalization, and the information-retrieval pipeline.', minhRole:'Semantic Matching & Deployment', minhDescription:'Develops semantic matching, improves investor ranking, and deploys the system.', quanRole:'Calendar Scheduling & Email Generation', quanDescription:'Builds investor scheduling and generates tailored outreach emails.',
@@ -520,19 +608,24 @@
     }
 
     function showPage(page) {
-      currentPage = page === 'about' ? 'about' : 'workspace';
+      const allowedPages = ['workspace', 'investors', 'about'];
+      currentPage = allowedPages.includes(page) ? page : 'workspace';
 
       document.getElementById('workspace-page').classList.toggle('hidden', currentPage !== 'workspace');
+      document.getElementById('investors-page').classList.toggle('hidden', currentPage !== 'investors');
       document.getElementById('about-page').classList.toggle('hidden', currentPage !== 'about');
 
-      const workspaceButton = document.getElementById('nav-workspace');
-      const aboutButton = document.getElementById('nav-about');
+      const navigationButtons = {
+        workspace: document.getElementById('nav-workspace'),
+        investors: document.getElementById('nav-investors'),
+        about: document.getElementById('nav-about')
+      };
 
       const activeButtonClasses = ['bg-gradient-to-r','from-blue-600','to-indigo-600','text-white','shadow-lg','shadow-blue-950/30'];
       const inactiveButtonClasses = ['text-slate-300','hover:bg-white/[.06]','hover:text-white'];
 
-      [workspaceButton, aboutButton].forEach(button => {
-        const active = (button === workspaceButton && currentPage === 'workspace') || (button === aboutButton && currentPage === 'about');
+      Object.entries(navigationButtons).forEach(([pageName, button]) => {
+        const active = pageName === currentPage;
         activeButtonClasses.forEach(className => button.classList.toggle(className, active));
         inactiveButtonClasses.forEach(className => button.classList.toggle(className, !active));
 
@@ -542,13 +635,24 @@
         icon.classList.toggle('text-slate-400', !active);
       });
 
-      document.getElementById('header-section-label').textContent = currentPage === 'about'
-        ? t('navAboutUs')
-        : t('navDocumentIntelligence');
+      const pageLabels = {
+        workspace: t('navDocumentIntelligence'),
+        investors: t('navInvestors'),
+        about: t('navAboutUs')
+      };
 
-      document.getElementById('header-page-title').textContent = currentPage === 'about'
-        ? t('aboutPageTitle')
-        : t('pageTitle');
+      const pageTitles = {
+        workspace: t('pageTitle'),
+        investors: t('investorsPageTitle'),
+        about: t('aboutPageTitle')
+      };
+
+      document.getElementById('header-section-label').textContent = pageLabels[currentPage];
+      document.getElementById('header-page-title').textContent = pageTitles[currentPage];
+
+      if (currentPage === 'investors' && !investorDirectoryLoaded) {
+        loadInvestorDirectory();
+      }
 
       window.scrollTo({ top: 0, behavior: 'smooth' });
     }
@@ -558,6 +662,7 @@
       localStorage.setItem('dealconnect-language', currentLanguage);
       document.documentElement.lang = currentLanguage;
       document.querySelectorAll('[data-i18n]').forEach(el => { el.textContent = t(el.dataset.i18n); });
+      document.querySelectorAll('[data-i18n-placeholder]').forEach(el => { el.placeholder = t(el.dataset.i18nPlaceholder); });
 
       const active = ['bg-slate-950','text-white','dark:bg-white','dark:text-slate-950'];
       const inactive = ['text-slate-500','hover:text-slate-900','dark:text-slate-400','dark:hover:text-white'];
@@ -569,6 +674,10 @@
       });
       updateThemeIcon();
       showPage(currentPage);
+      if (investorDirectoryLoaded) {
+        populateInvestorFilters();
+        applyInvestorFilters();
+      }
       checkBackend();
     }
 
@@ -942,6 +1051,234 @@
       }
     }
 
+    async function loadInvestorDirectory() {
+      const loading = document.getElementById('investor-directory-loading');
+      const errorBox = document.getElementById('investor-directory-error');
+
+      loading.classList.remove('hidden');
+      errorBox.classList.add('hidden');
+      errorBox.textContent = '';
+
+      try {
+        const response = await fetch('investors_data.json', { cache: 'no-store' });
+        if (!response.ok) {
+          throw new Error(`HTTP ${response.status}`);
+        }
+
+        const data = await response.json();
+        if (!Array.isArray(data)) {
+          throw new Error('Invalid investor data format');
+        }
+
+        allInvestors = data;
+        filteredInvestors = [...data];
+        investorDirectoryLoaded = true;
+
+        document.getElementById('investor-total-stat').textContent = allInvestors.length;
+        populateInvestorFilters();
+        applyInvestorFilters();
+      } catch (error) {
+        console.error(error);
+        errorBox.textContent = `${t('investorDataLoadFailed')} (${error.message})`;
+        errorBox.classList.remove('hidden');
+      } finally {
+        loading.classList.add('hidden');
+      }
+    }
+
+    function populateInvestorFilters() {
+      const industrySelect = document.getElementById('investor-industry-filter');
+      const stageSelect = document.getElementById('investor-stage-filter');
+
+      const selectedIndustry = industrySelect.value;
+      const selectedStage = stageSelect.value;
+
+      const industries = [...new Set(
+        allInvestors.flatMap(investor =>
+          Array.isArray(investor.target_industries)
+            ? investor.target_industries
+            : []
+        )
+      )].sort((a, b) => a.localeCompare(b));
+
+      const stages = [...new Set(
+        allInvestors.flatMap(investor =>
+          Array.isArray(investor.target_stages)
+            ? investor.target_stages
+            : []
+        )
+      )].sort((a, b) => a.localeCompare(b));
+
+      industrySelect.innerHTML = `<option value="">${escapeHTML(t('allIndustries'))}</option>`;
+      industries.forEach(industry => {
+        industrySelect.insertAdjacentHTML(
+          'beforeend',
+          `<option value="${escapeHTML(industry)}">${escapeHTML(industry)}</option>`
+        );
+      });
+
+      stageSelect.innerHTML = `<option value="">${escapeHTML(t('allStages'))}</option>`;
+      stages.forEach(stage => {
+        stageSelect.insertAdjacentHTML(
+          'beforeend',
+          `<option value="${escapeHTML(stage)}">${escapeHTML(stage)}</option>`
+        );
+      });
+
+      if (industries.includes(selectedIndustry)) {
+        industrySelect.value = selectedIndustry;
+      }
+      if (stages.includes(selectedStage)) {
+        stageSelect.value = selectedStage;
+      }
+    }
+
+    function resetInvestorFilters() {
+      document.getElementById('investor-search').value = '';
+      document.getElementById('investor-industry-filter').value = '';
+      document.getElementById('investor-stage-filter').value = '';
+      applyInvestorFilters();
+    }
+
+    function applyInvestorFilters() {
+      if (!investorDirectoryLoaded) return;
+
+      const query = document.getElementById('investor-search').value.trim().toLowerCase();
+      const industry = document.getElementById('investor-industry-filter').value;
+      const stage = document.getElementById('investor-stage-filter').value;
+
+      filteredInvestors = allInvestors.filter(investor => {
+        const searchableText = [
+          investor.name,
+          ...(investor.target_industries || []),
+          ...(investor.target_stages || []),
+          investor.technology_focus,
+          investor.problem_focus,
+          investor.investment_thesis,
+          investor.customer_focus
+        ].filter(Boolean).join(' ').toLowerCase();
+
+        const matchesQuery = !query || searchableText.includes(query);
+        const matchesIndustry = !industry ||
+          (investor.target_industries || []).includes(industry);
+        const matchesStage = !stage ||
+          (investor.target_stages || []).includes(stage);
+
+        return matchesQuery && matchesIndustry && matchesStage;
+      });
+
+      renderInvestorDirectory();
+    }
+
+    function renderInvestorDirectory() {
+      const grid = document.getElementById('investor-directory-grid');
+      const emptyState = document.getElementById('investor-directory-empty');
+      const visibleCount = filteredInvestors.length;
+
+      document.getElementById('investor-visible-stat').textContent = visibleCount;
+      document.querySelector('[data-investor-count]').textContent =
+        t('investorCount', { count: visibleCount });
+
+      grid.innerHTML = '';
+      emptyState.classList.toggle('hidden', visibleCount > 0);
+      grid.classList.toggle('hidden', visibleCount === 0);
+
+      filteredInvestors.forEach(investor => {
+        const industries = Array.isArray(investor.target_industries)
+          ? investor.target_industries
+          : [];
+        const stages = Array.isArray(investor.target_stages)
+          ? investor.target_stages
+          : [];
+
+        const industryTags = industries.map(industry => `
+          <span class="rounded-full bg-blue-50 px-2.5 py-1 text-[11px] font-bold text-blue-700 dark:bg-blue-500/10 dark:text-blue-300">
+            ${escapeHTML(industry)}
+          </span>
+        `).join('');
+
+        const stageTags = stages.map(stage => `
+          <span class="rounded-full bg-violet-50 px-2.5 py-1 text-[11px] font-bold text-violet-700 dark:bg-violet-500/10 dark:text-violet-300">
+            ${escapeHTML(stage)}
+          </span>
+        `).join('');
+
+        grid.insertAdjacentHTML('beforeend', `
+          <article class="group overflow-hidden rounded-3xl border border-slate-200/80 bg-white shadow-soft transition duration-300 hover:-translate-y-1 hover:shadow-xl dark:border-slate-800 dark:bg-slate-900/80">
+            <div class="border-b border-slate-100 bg-gradient-to-r from-slate-50 to-blue-50/70 p-5 dark:border-slate-800 dark:from-slate-900 dark:to-blue-950/30 sm:p-6">
+              <div class="flex items-start justify-between gap-4">
+                <div class="flex min-w-0 items-start gap-4">
+                  <div class="flex h-12 w-12 shrink-0 items-center justify-center rounded-2xl bg-gradient-to-br from-blue-600 to-cyan-500 text-sm font-extrabold text-white shadow-lg shadow-blue-500/20">
+                    ${String(investor.id ?? '').padStart(2, '0')}
+                  </div>
+                  <div class="min-w-0">
+                    <h3 class="truncate text-xl font-extrabold tracking-tight text-slate-950 dark:text-white">
+                      ${escapeHTML(investor.name || t('unnamedFund'))}
+                    </h3>
+                    <div class="mt-2 flex flex-wrap gap-2">${industryTags}</div>
+                  </div>
+                </div>
+                <span class="shrink-0 rounded-xl border border-emerald-200 bg-emerald-50 px-3 py-2 text-xs font-extrabold text-emerald-700 dark:border-emerald-900 dark:bg-emerald-500/10 dark:text-emerald-300">
+                  ${escapeHTML(investor.ticket_size || t('notUpdated'))}
+                </span>
+              </div>
+            </div>
+
+            <div class="space-y-5 p-5 sm:p-6">
+              <div>
+                <div class="text-[10px] font-extrabold uppercase tracking-[.15em] text-slate-400">${escapeHTML(t('investmentStage'))}</div>
+                <div class="mt-2 flex flex-wrap gap-2">${stageTags}</div>
+              </div>
+
+              <div class="grid gap-4 sm:grid-cols-2">
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-950/50">
+                  <div class="flex items-center gap-2 text-xs font-extrabold text-slate-900 dark:text-white">
+                    <i class="fa-solid fa-microchip text-blue-600 dark:text-blue-400"></i>
+                    ${escapeHTML(t('technologyFocus'))}
+                  </div>
+                  <p class="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400">${escapeHTML(investor.technology_focus || t('notUpdated'))}</p>
+                </div>
+
+                <div class="rounded-2xl border border-slate-200 bg-slate-50 p-4 dark:border-slate-700 dark:bg-slate-950/50">
+                  <div class="flex items-center gap-2 text-xs font-extrabold text-slate-900 dark:text-white">
+                    <i class="fa-solid fa-user-group text-cyan-600 dark:text-cyan-400"></i>
+                    ${escapeHTML(t('customerFocus'))}
+                  </div>
+                  <p class="mt-2 text-xs leading-5 text-slate-500 dark:text-slate-400">${escapeHTML(investor.customer_focus || t('notUpdated'))}</p>
+                </div>
+              </div>
+
+              <div class="rounded-2xl border border-amber-100 bg-amber-50/70 p-4 dark:border-amber-900/50 dark:bg-amber-500/[.06]">
+                <div class="flex items-center gap-2 text-xs font-extrabold text-amber-900 dark:text-amber-200">
+                  <i class="fa-solid fa-bullseye"></i>
+                  ${escapeHTML(t('problemFocus'))}
+                </div>
+                <p class="mt-2 text-sm leading-6 text-amber-900/80 dark:text-amber-100/80">${escapeHTML(investor.problem_focus || t('notUpdated'))}</p>
+              </div>
+
+              <div class="rounded-2xl border border-indigo-100 bg-indigo-50/70 p-4 dark:border-indigo-900/50 dark:bg-indigo-500/[.06]">
+                <div class="flex items-center gap-2 text-xs font-extrabold text-indigo-900 dark:text-indigo-200">
+                  <i class="fa-solid fa-lightbulb"></i>
+                  ${escapeHTML(t('investmentThesis'))}
+                </div>
+                <p class="mt-2 text-sm leading-6 text-indigo-900/80 dark:text-indigo-100/80">${escapeHTML(investor.investment_thesis || t('notUpdated'))}</p>
+              </div>
+
+              <div class="flex items-start gap-3 rounded-2xl border border-slate-200 p-4 dark:border-slate-700">
+                <span class="flex h-9 w-9 shrink-0 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 dark:bg-emerald-500/10 dark:text-emerald-400">
+                  <i class="fa-regular fa-calendar"></i>
+                </span>
+                <div>
+                  <div class="text-xs font-extrabold text-slate-900 dark:text-white">${escapeHTML(t('availableTime'))}</div>
+                  <p class="mt-1 text-xs leading-5 text-slate-500 dark:text-slate-400">${escapeHTML(investor.available_time || t('notUpdated'))}</p>
+                </div>
+              </div>
+            </div>
+          </article>
+        `);
+      });
+    }
+
     function setupDragAndDrop() {
       const zone = document.getElementById('upload-zone');
       const input = document.getElementById('dropzone-file');
@@ -965,6 +1302,7 @@
     setLanguage(currentLanguage);
     updateThemeIcon();
     setupDragAndDrop();
+    loadInvestorDirectory();
     checkBackend();
     setInterval(checkBackend, 30000);
   </script>
