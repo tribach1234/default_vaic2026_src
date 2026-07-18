@@ -1,0 +1,5 @@
+IMPORTANT
+
+The original uploaded archive contained a real Gemini API key in .env and an OAuth client secret in credentials.json.json.
+Revoke/rotate both credentials before using this project publicly.
+This sanitized deployment package does not contain those secret files.

@@ -1,0 +1,888 @@
+[
+  {
+    "name": "NextGen Ventures",
+    "target_industries": [
+      "EdTech",
+      "AI"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "100000 - 500000",
+    "technology_focus": "AI, Adaptive Learning, NLP",
+    "problem_focus": "Giáo dục truyền thống thiếu tính cá nhân hóa",
+    "investment_thesis": "Đầu tư vào công nghệ giáo dục lõi có khả năng mở rộng nhanh.",
+    "customer_focus": "B2C, B2B2C",
+    "available_time": "Thứ 3: 09:00 - 11:00 | Thứ 5: 14:00 - 16:00",
+    "id": 1
+  },
+  {
+    "name": "LifeScience Capital",
+    "target_industries": [
+      "HealthTech",
+      "MedTech"
+    ],
+    "target_stages": [
+      "Series A"
+    ],
+    "ticket_size": "500000 - 2000000",
+    "technology_focus": "SaaS, Blockchain, Data Analytics",
+    "problem_focus": "Quá tải hệ thống quản lý bệnh án",
+    "investment_thesis": "Chuyển đổi số bệnh viện và phòng khám.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 2: 13:30 - 15:30 | Thứ 4: 09:00 - 10:30",
+    "id": 2
+  },
+  {
+    "name": "Green Earth Fund",
+    "target_industries": [
+      "AgriTech",
+      "CleanTech"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A",
+      "Series A"
+    ],
+    "ticket_size": "200000 - 3000000",
+    "technology_focus": "IoT, Smart Sensors, AI",
+    "problem_focus": "Nông nghiệp sử dụng nước và phân bón kém hiệu quả",
+    "investment_thesis": "Đầu tư vào nông nghiệp bền vững và công nghệ khí hậu.",
+    "customer_focus": "B2B, B2G",
+    "available_time": "Thứ 3: 14:00 - 16:00 | Thứ 6: 10:00 - 11:30",
+    "id": 3
+  },
+  {
+    "name": "FinTech Alpha",
+    "target_industries": [
+      "FinTech",
+      "Blockchain"
+    ],
+    "target_stages": [
+      "Series A",
+      "Series B"
+    ],
+    "ticket_size": "1000000 - 10000000",
+    "technology_focus": "Payments, Blockchain, APIs",
+    "problem_focus": "Thanh toán doanh nghiệp còn nhiều thủ công",
+    "investment_thesis": "Hạ tầng tài chính và thanh toán cho Đông Nam Á.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 4: 15:00 - 17:00 | Thứ 6: 14:00 - 16:00",
+    "id": 4
+  },
+  {
+    "name": "Vision AI Ventures",
+    "target_industries": [
+      "AI",
+      "Computer Vision"
+    ],
+    "target_stages": [
+      "Seed"
+    ],
+    "ticket_size": "150000 - 800000",
+    "technology_focus": "Computer Vision, Deep Learning",
+    "problem_focus": "Kiểm định chất lượng sản phẩm thủ công",
+    "investment_thesis": "AI ứng dụng trong sản xuất và logistics.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 2: 10:00 - 12:00 | Thứ 5: 15:30 - 17:00",
+    "id": 5
+  },
+  {
+    "name": "Retail Future",
+    "target_industries": [
+      "RetailTech",
+      "E-commerce"
+    ],
+    "target_stages": [
+      "Seed",
+      "Series A"
+    ],
+    "ticket_size": "300000 - 2500000",
+    "technology_focus": "Recommendation Systems, AI",
+    "problem_focus": "Tỷ lệ chuyển đổi thương mại điện tử thấp",
+    "investment_thesis": "Giải pháp tăng doanh thu và trải nghiệm mua sắm.",
+    "customer_focus": "B2B2C",
+    "available_time": "Thứ 3: 13:00 - 15:00 | Thứ 6: 09:00 - 11:00",
+    "id": 6
+  },
+  {
+    "name": "Mobility Ventures",
+    "target_industries": [
+      "Mobility",
+      "Logistics"
+    ],
+    "target_stages": [
+      "Pre-Series A",
+      "Series A"
+    ],
+    "ticket_size": "500000 - 5000000",
+    "technology_focus": "Route Optimization, IoT",
+    "problem_focus": "Chi phí logistics cao",
+    "investment_thesis": "Tối ưu vận tải bằng AI và dữ liệu thời gian thực.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 4: 09:30 - 11:30 | Thứ 5: 13:30 - 15:30",
+    "id": 7
+  },
+  {
+    "name": "Cyber Shield VC",
+    "target_industries": [
+      "Cybersecurity",
+      "SaaS"
+    ],
+    "target_stages": [
+      "Seed",
+      "Series A"
+    ],
+    "ticket_size": "250000 - 3000000",
+    "technology_focus": "Zero Trust, Cloud Security",
+    "problem_focus": "Doanh nghiệp thiếu giải pháp bảo mật hiện đại",
+    "investment_thesis": "An ninh mạng cho doanh nghiệp vừa và lớn.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 2: 14:00 - 16:00 | Thứ 3: 09:00 - 10:30",
+    "id": 8
+  },
+  {
+    "name": "Smart City Partners",
+    "target_industries": [
+      "Smart City",
+      "IoT"
+    ],
+    "target_stages": [
+      "Series A"
+    ],
+    "ticket_size": "1000000 - 8000000",
+    "technology_focus": "IoT, Edge Computing",
+    "problem_focus": "Quản lý hạ tầng đô thị kém hiệu quả",
+    "investment_thesis": "Hạ tầng đô thị thông minh và bền vững.",
+    "customer_focus": "B2G",
+    "available_time": "Thứ 5: 10:00 - 12:00 | Thứ 6: 15:00 - 17:00",
+    "id": 9
+  },
+  {
+    "name": "FoodTech Capital",
+    "target_industries": [
+      "FoodTech",
+      "AgriTech"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "100000 - 1000000",
+    "technology_focus": "Supply Chain Analytics, IoT",
+    "problem_focus": "Lãng phí thực phẩm trong chuỗi cung ứng",
+    "investment_thesis": "Giảm thất thoát thực phẩm bằng công nghệ.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 3: 15:00 - 16:30 | Thứ 4: 09:00 - 11:00",
+    "id": 10
+  },
+  {
+    "name": "Climate Impact Fund",
+    "target_industries": [
+      "CleanTech",
+      "Energy"
+    ],
+    "target_stages": [
+      "Series A",
+      "Series B"
+    ],
+    "ticket_size": "2000000 - 10000000",
+    "technology_focus": "Renewable Energy, AI Forecasting",
+    "problem_focus": "Tối ưu sử dụng năng lượng tái tạo",
+    "investment_thesis": "Đầu tư tác động trong lĩnh vực năng lượng sạch.",
+    "customer_focus": "B2B, B2G",
+    "available_time": "Thứ 2: 09:00 - 11:00 | Thứ 4: 14:00 - 16:00",
+    "id": 11
+  },
+  {
+    "name": "Enterprise SaaS Ventures",
+    "target_industries": [
+      "SaaS",
+      "Enterprise Software"
+    ],
+    "target_stages": [
+      "Seed",
+      "Series A"
+    ],
+    "ticket_size": "250000 - 4000000",
+    "technology_focus": "Cloud, AI, Workflow Automation",
+    "problem_focus": "Quy trình doanh nghiệp còn thủ công",
+    "investment_thesis": "SaaS giúp doanh nghiệp tăng năng suất.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 3: 08:30 - 10:30 | Thứ 5: 13:00 - 15:00",
+    "id": 12
+  },
+  {
+    "name": "Web3 Frontier",
+    "target_industries": [
+      "Web3",
+      "Crypto"
+    ],
+    "target_stages": [
+      "Pre-Seed",
+      "Seed"
+    ],
+    "ticket_size": "50000 - 500000",
+    "technology_focus": "DeFi, Smart Contracts, DApps",
+    "problem_focus": "Thiếu tính minh bạch và chi phí trung gian cao",
+    "investment_thesis": "Tài chính phi tập trung và quyền sở hữu số.",
+    "customer_focus": "B2C, B2B",
+    "available_time": "Thứ 4: 16:00 - 18:00 | Thứ 6: 10:00 - 12:00",
+    "id": 13
+  },
+  {
+    "name": "InsurTech Innovators",
+    "target_industries": [
+      "InsurTech",
+      "FinTech"
+    ],
+    "target_stages": [
+      "Pre-Series A",
+      "Series A"
+    ],
+    "ticket_size": "500000 - 2500000",
+    "technology_focus": "Risk Analytics, AI, Big Data",
+    "problem_focus": "Quy trình bồi thường bảo hiểm chậm và phức tạp",
+    "investment_thesis": "Số hóa ngành bảo hiểm và tối ưu quản trị rủi ro.",
+    "customer_focus": "B2B, B2B2C",
+    "available_time": "Thứ 2: 14:00 - 15:30 | Thứ 5: 09:00 - 11:00",
+    "id": 14
+  },
+  {
+    "name": "PropTech Horizon",
+    "target_industries": [
+      "PropTech",
+      "Real Estate"
+    ],
+    "target_stages": [
+      "Seed",
+      "Series A"
+    ],
+    "ticket_size": "300000 - 3000000",
+    "technology_focus": "VR/AR, IoT, Platform",
+    "problem_focus": "Khó khăn trong việc tìm kiếm và quản lý bất động sản",
+    "investment_thesis": "Nền tảng giao dịch và quản lý bất động sản thông minh.",
+    "customer_focus": "B2C, B2B",
+    "available_time": "Thứ 3: 10:00 - 12:00 | Thứ 6: 14:00 - 16:00",
+    "id": 15
+  },
+  {
+    "name": "HRTech Catalyst",
+    "target_industries": [
+      "HRTech",
+      "SaaS"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "150000 - 1000000",
+    "technology_focus": "People Analytics, AI Matching",
+    "problem_focus": "Tuyển dụng sai người và giữ chân nhân tài kém",
+    "investment_thesis": "Giải pháp nhân sự dựa trên dữ liệu và AI.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 4: 09:00 - 11:00 | Thứ 5: 15:00 - 17:00",
+    "id": 16
+  },
+  {
+    "name": "Gaming Galaxy",
+    "target_industries": [
+      "Gaming",
+      "Entertainment"
+    ],
+    "target_stages": [
+      "Seed",
+      "Series A"
+    ],
+    "ticket_size": "200000 - 2000000",
+    "technology_focus": "Game Engines, Web3 Gaming, AR/VR",
+    "problem_focus": "Thiếu nội dung giải trí tương tác chất lượng cao",
+    "investment_thesis": "Studio game độc lập và nền tảng thể thao điện tử.",
+    "customer_focus": "B2C",
+    "available_time": "Thứ 2: 15:00 - 17:00 | Thứ 6: 13:30 - 15:30",
+    "id": 17
+  },
+  {
+    "name": "DeepTech Southeast",
+    "target_industries": [
+      "DeepTech",
+      "Hardware"
+    ],
+    "target_stages": [
+      "Series A",
+      "Series B"
+    ],
+    "ticket_size": "2000000 - 15000000",
+    "technology_focus": "Robotics, Quantum Computing, NanoTech",
+    "problem_focus": "Hạn chế về rào cản công nghệ lõi tại Đông Nam Á",
+    "investment_thesis": "Phát minh công nghệ có rào cản sao chép cao.",
+    "customer_focus": "B2B, B2G",
+    "available_time": "Thứ 3: 14:30 - 16:30 | Thứ 4: 10:00 - 12:00",
+    "id": 18
+  },
+  {
+    "name": "Edify Capital",
+    "target_industries": [
+      "EdTech",
+      "Creator Economy"
+    ],
+    "target_stages": [
+      "Seed"
+    ],
+    "ticket_size": "50000 - 300000",
+    "technology_focus": "LMS, Content Delivery Network",
+    "problem_focus": "Nhà sáng tạo nội dung khó kiếm tiền từ kiến thức",
+    "investment_thesis": "Công cụ trao quyền cho nhà giáo dục độc lập.",
+    "customer_focus": "B2C, B2B",
+    "available_time": "Thứ 5: 09:30 - 11:30 | Thứ 6: 14:00 - 15:30",
+    "id": 19
+  },
+  {
+    "name": "BioHealth Innovate",
+    "target_industries": [
+      "BioTech",
+      "HealthTech"
+    ],
+    "target_stages": [
+      "Pre-Series A",
+      "Series A"
+    ],
+    "ticket_size": "1000000 - 5000000",
+    "technology_focus": "Genomics, Telemedicine",
+    "problem_focus": "Chi phí chẩn đoán bệnh lý di truyền cao",
+    "investment_thesis": "Sinh học phân tử và chăm sóc sức khỏe dự phòng.",
+    "customer_focus": "B2B, B2C",
+    "available_time": "Thứ 2: 09:00 - 10:30 | Thứ 4: 14:00 - 16:00",
+    "id": 20
+  },
+  {
+    "name": "SupplyChain X",
+    "target_industries": [
+      "Logistics",
+      "Supply Chain"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "200000 - 1500000",
+    "technology_focus": "Predictive Analytics, Automation",
+    "problem_focus": "Đứt gãy chuỗi cung ứng và kho bãi kém tối ưu",
+    "investment_thesis": "Tự động hóa kho bãi và dự báo chuỗi cung ứng.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 3: 13:00 - 15:00 | Thứ 5: 10:00 - 11:30",
+    "id": 21
+  },
+  {
+    "name": "PetCare Ventures",
+    "target_industries": [
+      "PetTech",
+      "E-commerce"
+    ],
+    "target_stages": [
+      "Seed"
+    ],
+    "ticket_size": "100000 - 500000",
+    "technology_focus": "Marketplace, IoT Wearables",
+    "problem_focus": "Phân mảnh dịch vụ chăm sóc thú cưng",
+    "investment_thesis": "Hệ sinh thái dịch vụ và sản phẩm cho thú cưng.",
+    "customer_focus": "B2C",
+    "available_time": "Thứ 4: 10:00 - 12:00 | Thứ 6: 15:00 - 16:30",
+    "id": 22
+  },
+  {
+    "name": "WomenTech Fund",
+    "target_industries": [
+      "FemTech",
+      "HealthTech"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "150000 - 800000",
+    "technology_focus": "App/Platform, Telehealth",
+    "problem_focus": "Thiếu các giải pháp y tế chuyên biệt cho phụ nữ",
+    "investment_thesis": "Đầu tư vào các startup do nữ lãnh đạo hoặc phục vụ phái nữ.",
+    "customer_focus": "B2C",
+    "available_time": "Thứ 2: 13:00 - 15:00 | Thứ 3: 09:00 - 11:00",
+    "id": 23
+  },
+  {
+    "name": "Blue Ocean Capital",
+    "target_industries": [
+      "MaritimeTech",
+      "Logistics"
+    ],
+    "target_stages": [
+      "Series A"
+    ],
+    "ticket_size": "1000000 - 4000000",
+    "technology_focus": "IoT, Satellite Tracking",
+    "problem_focus": "Quản lý tàu biển và cảng biển thủ công",
+    "investment_thesis": "Số hóa ngành hàng hải và vận tải biển.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 4: 14:00 - 16:00 | Thứ 5: 09:30 - 11:00",
+    "id": 24
+  },
+  {
+    "name": "EduPlay Seed",
+    "target_industries": [
+      "EdTech",
+      "Gaming"
+    ],
+    "target_stages": [
+      "Pre-Seed",
+      "Seed"
+    ],
+    "ticket_size": "50000 - 250000",
+    "technology_focus": "Gamification, AR",
+    "problem_focus": "Trẻ em mất hứng thú với phương pháp học truyền thống",
+    "investment_thesis": "Học tập qua trò chơi (Game-based learning) cho độ tuổi K-12.",
+    "customer_focus": "B2C",
+    "available_time": "Thứ 3: 15:30 - 17:30 | Thứ 6: 08:30 - 10:30",
+    "id": 25
+  },
+  {
+    "name": "Agile SaaS Fund",
+    "target_industries": [
+      "SaaS",
+      "B2B Software"
+    ],
+    "target_stages": [
+      "Pre-Series A",
+      "Series A"
+    ],
+    "ticket_size": "500000 - 3000000",
+    "technology_focus": "Cloud, API-first",
+    "problem_focus": "Doanh nghiệp SME khó tiếp cận phần mềm đắt đỏ",
+    "investment_thesis": "Phần mềm B2B dạng Micro-SaaS dễ tích hợp.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 2: 10:00 - 12:00 | Thứ 4: 15:00 - 17:00",
+    "id": 26
+  },
+  {
+    "name": "ElderCare Partners",
+    "target_industries": [
+      "AgeTech",
+      "HealthTech"
+    ],
+    "target_stages": [
+      "Seed"
+    ],
+    "ticket_size": "200000 - 1000000",
+    "technology_focus": "IoT, Remote Monitoring",
+    "problem_focus": "Dân số già hóa thiếu người chăm sóc y tế",
+    "investment_thesis": "Công nghệ hỗ trợ người cao tuổi sống tự lập và an toàn.",
+    "customer_focus": "B2C, B2B2C",
+    "available_time": "Thứ 5: 14:30 - 16:30 | Thứ 6: 10:30 - 12:00",
+    "id": 27
+  },
+  {
+    "name": "CreatorFi",
+    "target_industries": [
+      "FinTech",
+      "Creator Economy"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "150000 - 1500000",
+    "technology_focus": "Payments, Revenue Based Financing",
+    "problem_focus": "Content Creator khó tiếp cận vốn vay ngân hàng",
+    "investment_thesis": "Giải pháp tài chính linh hoạt cho nền kinh tế sáng tạo.",
+    "customer_focus": "B2C",
+    "available_time": "Thứ 3: 09:30 - 11:30 | Thứ 4: 13:00 - 15:00",
+    "id": 28
+  },
+  {
+    "name": "SpaceTech Asia",
+    "target_industries": [
+      "SpaceTech",
+      "Aerospace"
+    ],
+    "target_stages": [
+      "Series A",
+      "Series B"
+    ],
+    "ticket_size": "3000000 - 15000000",
+    "technology_focus": "Small Satellites, Geospatial Data",
+    "problem_focus": "Dữ liệu vệ tinh đắt đỏ và khó tiếp cận",
+    "investment_thesis": "Thương mại hóa không gian và dữ liệu quan sát trái đất.",
+    "customer_focus": "B2B, B2G",
+    "available_time": "Thứ 2: 15:00 - 17:00 | Thứ 5: 09:00 - 11:00",
+    "id": 29
+  },
+  {
+    "name": "LegalTech Solutions",
+    "target_industries": [
+      "LegalTech",
+      "SaaS"
+    ],
+    "target_stages": [
+      "Seed"
+    ],
+    "ticket_size": "100000 - 600000",
+    "technology_focus": "NLP, Document Automation",
+    "problem_focus": "Rà soát hợp đồng pháp lý tốn nhiều thời gian và chi phí",
+    "investment_thesis": "Tự động hóa quy trình pháp lý bằng Trí tuệ nhân tạo.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 4: 10:00 - 11:30 | Thứ 6: 14:00 - 16:00",
+    "id": 30
+  },
+  {
+    "name": "TravelTech Vanguard",
+    "target_industries": [
+      "TravelTech",
+      "Hospitality"
+    ],
+    "target_stages": [
+      "Pre-Series A",
+      "Series A"
+    ],
+    "ticket_size": "400000 - 2500000",
+    "technology_focus": "Dynamic Pricing, Booking Platforms",
+    "problem_focus": "Trải nghiệm du lịch bị phân mảnh, thiếu đồng bộ",
+    "investment_thesis": "Số hóa ngành du lịch và tối ưu hóa doanh thu khách sạn.",
+    "customer_focus": "B2B, B2C",
+    "available_time": "Thứ 3: 14:00 - 16:00 | Thứ 5: 10:30 - 12:00",
+    "id": 31
+  },
+  {
+    "name": "FashionTech Loop",
+    "target_industries": [
+      "RetailTech",
+      "Sustainability"
+    ],
+    "target_stages": [
+      "Seed"
+    ],
+    "ticket_size": "100000 - 500000",
+    "technology_focus": "3D Fitting, Supply Chain Tracing",
+    "problem_focus": "Rác thải thời trang nhanh và tỷ lệ hoàn hàng cao",
+    "investment_thesis": "Thời trang tuần hoàn và nâng cao trải nghiệm thử đồ ảo.",
+    "customer_focus": "B2B, B2C",
+    "available_time": "Thứ 2: 09:30 - 11:30 | Thứ 4: 15:30 - 17:00",
+    "id": 32
+  },
+  {
+    "name": "Urban Mobility Fund",
+    "target_industries": [
+      "Mobility",
+      "CleanTech"
+    ],
+    "target_stages": [
+      "Series A"
+    ],
+    "ticket_size": "1500000 - 6000000",
+    "technology_focus": "EV Infrastructure, Battery Tech",
+    "problem_focus": "Thiếu hạ tầng trạm sạc cho xe điện tại đô thị",
+    "investment_thesis": "Chuyển dịch sang phương tiện giao thông chạy điện và vi mô.",
+    "customer_focus": "B2C, B2G",
+    "available_time": "Thứ 3: 09:00 - 11:00 | Thứ 6: 13:00 - 15:00",
+    "id": 33
+  },
+  {
+    "name": "MicroFinance Impact",
+    "target_industries": [
+      "FinTech",
+      "Social Impact"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "200000 - 1200000",
+    "technology_focus": "Alternative Credit Scoring",
+    "problem_focus": "Người thu nhập thấp không tiếp cận được tín dụng ngân hàng",
+    "investment_thesis": "Tài chính toàn diện thông qua chấm điểm tín dụng thay thế.",
+    "customer_focus": "B2C",
+    "available_time": "Thứ 4: 14:00 - 16:00 | Thứ 5: 15:00 - 17:00",
+    "id": 34
+  },
+  {
+    "name": "AgriFood Connect",
+    "target_industries": [
+      "AgriTech",
+      "Marketplace"
+    ],
+    "target_stages": [
+      "Series A",
+      "Series B"
+    ],
+    "ticket_size": "2000000 - 8000000",
+    "technology_focus": "B2B Marketplace, Traceability",
+    "problem_focus": "Nông dân bị ép giá bởi quá nhiều tầng trung gian",
+    "investment_thesis": "Sàn thương mại điện tử B2B nông sản minh bạch.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 2: 14:30 - 16:30 | Thứ 6: 09:30 - 11:30",
+    "id": 35
+  },
+  {
+    "name": "Mental Health Ventures",
+    "target_industries": [
+      "HealthTech",
+      "Wellness"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "150000 - 1000000",
+    "technology_focus": "Teletherapy, AI Chatbots",
+    "problem_focus": "Rào cản tâm lý và chi phí khi điều trị sức khỏe tinh thần",
+    "investment_thesis": "Dân chủ hóa dịch vụ chăm sóc sức khỏe tâm lý.",
+    "customer_focus": "B2C, B2B",
+    "available_time": "Thứ 3: 13:30 - 15:30 | Thứ 5: 09:00 - 10:30",
+    "id": 36
+  },
+  {
+    "name": "OmniChannel Capital",
+    "target_industries": [
+      "RetailTech",
+      "SaaS"
+    ],
+    "target_stages": [
+      "Pre-Series A",
+      "Series A"
+    ],
+    "ticket_size": "500000 - 3000000",
+    "technology_focus": "ERP, POS Systems, CRM",
+    "problem_focus": "Bán lẻ đa kênh khó đồng bộ tồn kho và khách hàng",
+    "investment_thesis": "Giải pháp quản trị bán lẻ hợp nhất.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 4: 09:00 - 11:00 | Thứ 6: 14:30 - 16:30",
+    "id": 37
+  },
+  {
+    "name": "Cyber Defense Seed",
+    "target_industries": [
+      "Cybersecurity",
+      "DeepTech"
+    ],
+    "target_stages": [
+      "Seed"
+    ],
+    "ticket_size": "200000 - 700000",
+    "technology_focus": "Threat Intelligence, AI Security",
+    "problem_focus": "Gia tăng các cuộc tấn công mạng bằng AI",
+    "investment_thesis": "Giải pháp phòng thủ không gian mạng chủ động.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 2: 10:30 - 12:00 | Thứ 5: 14:00 - 16:00",
+    "id": 38
+  },
+  {
+    "name": "CleanWater Impact",
+    "target_industries": [
+      "CleanTech",
+      "Social Impact"
+    ],
+    "target_stages": [
+      "Seed",
+      "Series A"
+    ],
+    "ticket_size": "300000 - 2000000",
+    "technology_focus": "Water Purification, IoT Monitoring",
+    "problem_focus": "Khan hiếm nguồn nước sạch tại các nước đang phát triển",
+    "investment_thesis": "Công nghệ lọc nước giá rẻ và giám sát chất lượng nước.",
+    "customer_focus": "B2B, B2G",
+    "available_time": "Thứ 3: 10:00 - 12:00 | Thứ 4: 15:30 - 17:00",
+    "id": 39
+  },
+  {
+    "name": "AutoTech Shift",
+    "target_industries": [
+      "AutoTech",
+      "Marketplace"
+    ],
+    "target_stages": [
+      "Pre-Series A"
+    ],
+    "ticket_size": "400000 - 1500000",
+    "technology_focus": "Platform, Financing API",
+    "problem_focus": "Thị trường mua bán ô tô cũ thiếu minh bạch",
+    "investment_thesis": "Sàn giao dịch ô tô số hóa kèm dịch vụ tài chính.",
+    "customer_focus": "B2C, B2B",
+    "available_time": "Thứ 5: 10:00 - 12:00 | Thứ 6: 13:30 - 15:30",
+    "id": 40
+  },
+  {
+    "name": "Robotics Frontier",
+    "target_industries": [
+      "Robotics",
+      "Industry 4.0"
+    ],
+    "target_stages": [
+      "Series A",
+      "Series B"
+    ],
+    "ticket_size": "2000000 - 10000000",
+    "technology_focus": "Autonomous Robots, Computer Vision",
+    "problem_focus": "Thiếu hụt lao động tay nghề cao trong sản xuất",
+    "investment_thesis": "Tự động hóa nhà máy bằng robot thông minh.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 2: 14:00 - 16:00 | Thứ 4: 09:30 - 11:30",
+    "id": 41
+  },
+  {
+    "name": "LanguageTech Horizons",
+    "target_industries": [
+      "EdTech",
+      "AI"
+    ],
+    "target_stages": [
+      "Seed"
+    ],
+    "ticket_size": "100000 - 400000",
+    "technology_focus": "Speech Recognition, NLP",
+    "problem_focus": "Học ngoại ngữ thiếu môi trường giao tiếp thực tế",
+    "investment_thesis": "Ứng dụng AI mô phỏng hội thoại đa ngôn ngữ.",
+    "customer_focus": "B2C",
+    "available_time": "Thứ 3: 14:00 - 15:30 | Thứ 6: 10:00 - 11:30",
+    "id": 42
+  },
+  {
+    "name": "Cloud Native Capital",
+    "target_industries": [
+      "SaaS",
+      "DevTools"
+    ],
+    "target_stages": [
+      "Pre-Series A",
+      "Series A"
+    ],
+    "ticket_size": "800000 - 4000000",
+    "technology_focus": "DevOps, PaaS, Open Source",
+    "problem_focus": "Triển khai phần mềm phức tạp và tốn kém tài nguyên",
+    "investment_thesis": "Công cụ hỗ trợ lập trình viên và hạ tầng đám mây.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 4: 13:00 - 15:00 | Thứ 5: 09:00 - 11:00",
+    "id": 43
+  },
+  {
+    "name": "Gig Economy Fund",
+    "target_industries": [
+      "HRTech",
+      "Marketplace"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "250000 - 1500000",
+    "technology_focus": "Matching Algorithm, Payment Splitting",
+    "problem_focus": "Lao động tự do khó quản lý thu nhập và tìm việc ổn định",
+    "investment_thesis": "Nền tảng việc làm linh hoạt và phúc lợi cho gig worker.",
+    "customer_focus": "B2C, B2B",
+    "available_time": "Thứ 2: 09:30 - 11:30 | Thứ 3: 15:00 - 17:00",
+    "id": 44
+  },
+  {
+    "name": "GovTech Innovate",
+    "target_industries": [
+      "GovTech",
+      "Smart City"
+    ],
+    "target_stages": [
+      "Series A"
+    ],
+    "ticket_size": "1000000 - 5000000",
+    "technology_focus": "Identity Management, Data Analytics",
+    "problem_focus": "Thủ tục hành chính công còn rườm rà, chậm trễ",
+    "investment_thesis": "Số hóa dịch vụ công và định danh điện tử.",
+    "customer_focus": "B2G",
+    "available_time": "Thứ 4: 15:00 - 17:00 | Thứ 6: 09:00 - 11:00",
+    "id": 45
+  },
+  {
+    "name": "SleepTech Ventures",
+    "target_industries": [
+      "HealthTech",
+      "Wellness"
+    ],
+    "target_stages": [
+      "Seed"
+    ],
+    "ticket_size": "100000 - 600000",
+    "technology_focus": "Sensors, Sound Therapy App",
+    "problem_focus": "Tình trạng mất ngủ và căng thẳng tăng cao ở dân thành thị",
+    "investment_thesis": "Giải pháp cải thiện chất lượng giấc ngủ dựa trên dữ liệu.",
+    "customer_focus": "B2C",
+    "available_time": "Thứ 2: 13:30 - 15:30 | Thứ 5: 14:00 - 16:00",
+    "id": 46
+  },
+  {
+    "name": "Circular Economy VC",
+    "target_industries": [
+      "CleanTech",
+      "Recycling"
+    ],
+    "target_stages": [
+      "Pre-Series A",
+      "Series A"
+    ],
+    "ticket_size": "500000 - 3000000",
+    "technology_focus": "Waste-to-Energy, Material Science",
+    "problem_focus": "Rác thải nhựa không được phân loại và tái chế đúng cách",
+    "investment_thesis": "Mô hình kinh tế tuần hoàn và vật liệu thay thế.",
+    "customer_focus": "B2B, B2G",
+    "available_time": "Thứ 3: 09:00 - 10:30 | Thứ 6: 15:00 - 17:00",
+    "id": 47
+  },
+  {
+    "name": "FitTech Partners",
+    "target_industries": [
+      "Fitness",
+      "HealthTech"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "200000 - 1200000",
+    "technology_focus": "Computer Vision, Smart Equipment",
+    "problem_focus": "Tập luyện tại nhà thiếu người hướng dẫn chuẩn tư thế",
+    "investment_thesis": "Tích hợp AI vào thiết bị thể thao cá nhân.",
+    "customer_focus": "B2C",
+    "available_time": "Thứ 4: 10:30 - 12:00 | Thứ 5: 13:00 - 15:00",
+    "id": 48
+  },
+  {
+    "name": "SME Credit Alpha",
+    "target_industries": [
+      "FinTech",
+      "Lending"
+    ],
+    "target_stages": [
+      "Series A",
+      "Series B"
+    ],
+    "ticket_size": "2000000 - 12000000",
+    "technology_focus": "Risk Models, Open Banking",
+    "problem_focus": "Doanh nghiệp siêu nhỏ thiếu tài sản thế chấp để vay vốn",
+    "investment_thesis": "Cho vay tín chấp SME dựa trên dòng tiền số.",
+    "customer_focus": "B2B",
+    "available_time": "Thứ 2: 15:30 - 17:30 | Thứ 4: 09:00 - 11:00",
+    "id": 49
+  },
+  {
+    "name": "MediaTech Forward",
+    "target_industries": [
+      "MediaTech",
+      "Creator Economy"
+    ],
+    "target_stages": [
+      "Seed",
+      "Pre-Series A"
+    ],
+    "ticket_size": "300000 - 1500000",
+    "technology_focus": "Video AI, Generative Content",
+    "problem_focus": "Chi phí sản xuất nội dung video chuyên nghiệp quá cao",
+    "investment_thesis": "Công cụ AI tạo sinh (GenAI) cho ngành truyền thông.",
+    "customer_focus": "B2B, B2C",
+    "available_time": "Thứ 3: 13:00 - 15:00 | Thứ 6: 10:00 - 12:00",
+    "id": 50
+  }
+]

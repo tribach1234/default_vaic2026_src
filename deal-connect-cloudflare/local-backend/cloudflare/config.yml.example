@@ -1,0 +1,10 @@
+# Chỉ dùng khi bạn quản lý tunnel bằng file local thay vì token từ Dashboard.
+tunnel: YOUR_TUNNEL_UUID
+credentials-file: C:\Users\YOUR_WINDOWS_USER\.cloudflared\YOUR_TUNNEL_UUID.json
+
+ingress:
+  - hostname: api.your-domain.com
+    service: http://127.0.0.1:5000
+    originRequest:
+      connectTimeout: 30s
+  - service: http_status:404
